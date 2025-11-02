@@ -1,21 +1,21 @@
 <div class="addBulkColorDialog spectrum-Dialog spectrum-Dialog--medium spectrum-Dialog--confirmation" id="bulkConvertDialog">
   <div class="spectrum-Dialog-grid">
-    <h2 class="spectrum-Dialog-heading">Convert bulk</h2>
+    <h2 class="spectrum-Dialog-heading">一括変換</h2>
     <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider"/>
     <section class="spectrum-Dialog-content">
       <span class="spectrum-Typography">
-        <p class="spectrum-Body spectrum-Body--sizeS">Enter hex colors separated by comma or new line. </p>
-        <p class="spectrum-Body spectrum-Body--sizeS">Colors will be converted into the selected color spaces and downloaded as a CSV file.</p>
+        <p class="spectrum-Body spectrum-Body--sizeS">16 進カラーコードをカンマまたは改行で区切って入力してください。</p>
+        <p class="spectrum-Body spectrum-Body--sizeS">指定した色空間に変換し、CSV ファイルとしてダウンロードします。</p>
       </span>
       <div class="spectrum-Form spectrum-Form--labelsAbove">
         <div class="spectrum-Form-item">
-          <label for="fieldLabelExample-lifestory" class="spectrum-Form-itemLabel">Colors (hex)</label>
+          <label for="fieldLabelExample-lifestory" class="spectrum-Form-itemLabel">色（HEX）</label>
           <div class="spectrum-Textfield spectrum-Textfield--multiline" style="width:100%;">
-            <textarea id="bulkConvertColors" class="spectrum-Textfield-input" placeholder="Enter colors here"></textarea>
+            <textarea id="bulkConvertColors" class="spectrum-Textfield-input" placeholder="ここに色を入力"></textarea>
           </div>
         </div>
         <div class="spectrum-Form-item">
-          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel" for="spectrum-textinput-instance">Color spaces / formats</label>
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel" for="spectrum-textinput-instance">色空間 / フォーマット</label>
           <div class="spectrum-Form-itemField">
             <div class="spectrum-FieldGroup spectrum-FieldGroup--vertical">
               <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item">
@@ -164,7 +164,7 @@
 
       <div class="spectrum-Form spectrum-Form--labelsAbove">
         <div class="spectrum-Form-item">
-          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel" for="spectrum-textinput-instance">Contrast</label>
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel" for="spectrum-textinput-instance">コントラスト</label>
           <div class="spectrum-Form-itemField">
             <div class="spectrum-FieldGroup">
               <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item">
@@ -174,7 +174,7 @@
                     <use xlink:href="#spectrum-css-icon-Checkmark100" />
                   </svg>
                 </span>
-                <span class="spectrum-Checkbox-label">Relative luminance</span>
+                <span class="spectrum-Checkbox-label">相対輝度</span>
               </label>
             </div>
           </div>
@@ -193,7 +193,7 @@
           </div>
           <div class="spectrum-Form-itemField">
             <div class="spectrum-Form-item spectrum-Form-item--row">
-              <label class="spectrum-FieldLabel spectrum-FieldLabel--left spectrum-Fieldlabel--sizeM ">Background color</label>
+              <label class="spectrum-FieldLabel spectrum-FieldLabel--left spectrum-Fieldlabel--sizeM ">背景色</label>
               <input type="color" id="bulkConvertBackground" class="keyColor-Item keyColor-Item--standalone"/>
             </div>
           </div>
@@ -202,8 +202,8 @@
       </div>
     </section>
     <div class="spectrum-ButtonGroup spectrum-Dialog-buttonGroup spectrum-Dialog-buttonGroup--noFooter">
-      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary spectrum-ButtonGroup-item" onclick="cancelBulkConvert()">Cancel</button>
-      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--cta spectrum-ButtonGroup-item" id="bulkConvert">Convert and download</button>
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary spectrum-ButtonGroup-item" onclick="cancelBulkConvert()">キャンセル</button>
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--cta spectrum-ButtonGroup-item" id="bulkConvert">変換してダウンロード</button>
 
     </div>
   </div>
