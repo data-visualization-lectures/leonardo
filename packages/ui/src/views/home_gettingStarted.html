@@ -3,20 +3,20 @@
     <h1 class="spectrum-Heading spectrum-Heading--sizeXXL spectrum-Heading--heavy">Leonardo JS API</h1>
     <hr class="spectrum-Divider spectrum-Divider--sizeM">
     <p class="spectrum-Body spectrum-Body--sizeL">
-      The API docs will help you to use @adobe/leonardo-contrast-colors in your development environment.
+      この API ドキュメントは、開発環境で @adobe/leonardo-contrast-colors を活用するための手引きです。
     </p>
-    <h2 class="spectrum-Heading spectrum-Heading--sizeXL spectrum-Heading--heavy" id="docs-quick-start">Quick start</h2>
-    <h3 class="spectrum-Heading spectrum-Heading--sizeS" id="docs-install-the-package">Install the package:</h3>
+    <h2 class="spectrum-Heading spectrum-Heading--sizeXL spectrum-Heading--heavy" id="docs-quick-start">クイックスタート</h2>
+    <h3 class="spectrum-Heading spectrum-Heading--sizeS" id="docs-install-the-package">パッケージをインストール:</h3>
     <pre><code><span class="hljs-selector-tag">npm</span> <span class="hljs-selector-tag">i</span> @<span class="hljs-keyword">adobe</span>/<span class="hljs-keyword">leonardo</span>-<span class="hljs-keyword">contrast</span>-<span class="hljs-keyword">colors</span>
     </code></pre>
-    <h3 class="spectrum-Heading spectrum-Heading--sizeS" id="docs-import-the-package">Import the package:</h3>
-    <h4 class="spectrum-Heading spectrum-Heading--sizeXS" id="docs-cjs-node-12-x">CJS (Node 12.x)</h4>
+    <h3 class="spectrum-Heading spectrum-Heading--sizeS" id="docs-import-the-package">パッケージをインポート:</h3>
+    <h4 class="spectrum-Heading spectrum-Heading--sizeXS" id="docs-cjs-node-12-x">CJS（Node 12.x）</h4>
     <pre><code class="lang-js"><span class="hljs-keyword">const</span> { Theme, Color, BackgroundColor } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@adobe/leonardo-contrast-colors'</span>);
     </code></pre>
-    <h4 class="spectrum-Heading spectrum-Heading--sizeXS" id="docs-esm-node-13-x">ESM (Node 13.x)</h4>
+    <h4 class="spectrum-Heading spectrum-Heading--sizeXS" id="docs-esm-node-13-x">ESM（Node 13.x）</h4>
     <pre><code class="lang-js"><span class="hljs-keyword">import</span> { Theme, Color, BackgroundColor } <span class="hljs-keyword">from</span> <span class="hljs-string">'@adobe/leonardo-contrast-colors'</span>;
     </code></pre>
-    <h3 class="spectrum-Heading spectrum-Heading--sizeS" id="docs-create-and-pass-colors-and-a-background-color-to-a-new-theme-see-additional-options-below">Create and pass colors and a background color to a new Theme (see additional options below):</h3>
+    <h3 class="spectrum-Heading spectrum-Heading--sizeS" id="docs-create-and-pass-colors-and-a-background-color-to-a-new-theme-see-additional-options-below">色と背景色を新しい Theme に渡します（追加のオプションは下記参照）:</h3>
     <pre><code class="lang-js"><span class="hljs-keyword">let</span> gray = <span class="hljs-keyword">new</span> BackgroundColor({
           name: <span class="hljs-string">'gray'</span>,
           colorKeys: [<span class="hljs-string">'#cacaca'</span>],
@@ -40,81 +40,81 @@
     <span class="hljs-comment">// returns theme colors as JSON</span>
     <span class="hljs-keyword">let</span> colors = theme.contrastColors;
     </code></pre>
-    <h2 class="spectrum-Heading spectrum-Heading--sizeXL spectrum-Heading--heavy" id="docs-api-reference">API Reference</h2>
+    <h2 class="spectrum-Heading spectrum-Heading--sizeXL spectrum-Heading--heavy" id="docs-api-reference">API リファレンス</h2>
     <h3 class="spectrum-Heading spectrum-Heading--sizeS" id="docs-theme"><code>Theme</code></h3>
-    <p>Class function used to generate adaptive contrast-based colors. Parameters are destructured and need to be explicitly called.</p>
+    <p>適応型のコントラストベース配色を生成するクラス関数です。パラメーターは分割代入されるため、明示的に指定する必要があります。</p>
     <table class="spectrum-Table spectrum-Table--sizeM">
        <thead class="spectrum-Table-head">
           <tr class="spectrum-Table-row">
-             <th  class="spectrum-Table-headCell">Parameter</th>
-             <th  class="spectrum-Table-headCell">Type</th>
-             <th  class="spectrum-Table-headCell">Description</th>
+             <th  class="spectrum-Table-headCell">パラメーター</th>
+             <th  class="spectrum-Table-headCell">型</th>
+             <th  class="spectrum-Table-headCell">説明</th>
           </tr>
        </thead class="spectrum-Table-head">
        <tbody class="spectrum-Table-body">
           <tr class="spectrum-Table-row">
              <td class="spectrum-Table-cell" tabindex="0"><code>colors</code></td>
              <td class="spectrum-Table-cell" tabindex="0">Array</td>
-             <td class="spectrum-Table-cell" tabindex="0">List of <code>Color</code> classes to generate theme colors for. A single <code>BackgroundColor</code> class is required.</td>
+             <td class="spectrum-Table-cell" tabindex="0">テーマカラー生成に使用する <code>Color</code> クラスの配列。<code>BackgroundColor</code> クラスを 1 つ含める必要があります。</td>
           </tr>
           <tr class="spectrum-Table-row">
              <td class="spectrum-Table-cell" tabindex="0"><code>lightness</code></td>
              <td class="spectrum-Table-cell" tabindex="0">Number</td>
-             <td class="spectrum-Table-cell" tabindex="0">Value from 0-100 for desired lightness of generated theme background color (whole number)</td>
+             <td class="spectrum-Table-cell" tabindex="0">生成されるテーマの背景色に設定する明度（0〜100 の整数値）</td>
           </tr>
           <tr class="spectrum-Table-row">
              <td class="spectrum-Table-cell" tabindex="0"><code>contrast</code></td>
              <td class="spectrum-Table-cell" tabindex="0">Number</td>
-             <td class="spectrum-Table-cell" tabindex="0">Multiplier to increase or decrease contrast for all theme colors (default is <code>1</code>)</td>
+             <td class="spectrum-Table-cell" tabindex="0">テーマ内の全色のコントラストを増減させる係数（既定値は <code>1</code>）</td>
           </tr>
           <tr class="spectrum-Table-row">
              <td class="spectrum-Table-cell" tabindex="0"><code>saturation</code></td>
              <td class="spectrum-Table-cell" tabindex="0">Number</td>
-             <td class="spectrum-Table-cell" tabindex="0">Value from 0-100 for decreasing saturation of all theme colors (default is <code>100</code>)</td>
+             <td class="spectrum-Table-cell" tabindex="0">テーマ内の全色の彩度を下げる 0〜100 の値（既定値は <code>100</code>）</td>
           </tr>
           <tr class="spectrum-Table-row">
              <td class="spectrum-Table-cell" tabindex="0"><code>output</code></td>
              <td class="spectrum-Table-cell" tabindex="0">Enum</td>
-             <td class="spectrum-Table-cell" tabindex="0">Desired color output format</td>
+             <td class="spectrum-Table-cell" tabindex="0">希望するカラーの出力形式</td>
           </tr>
        </tbody>
     </table class="spectrum-Table spectrum-Table--sizeM">
-    <h4 class="spectrum-Heading spectrum-Heading--sizeXS" id="docs-setters">Setters</h4>
+    <h4 class="spectrum-Heading spectrum-Heading--sizeXS" id="docs-setters">セッター</h4>
     <table class="spectrum-Table spectrum-Table--sizeM">
        <thead class="spectrum-Table-head">
           <tr class="spectrum-Table-row">
-             <th  class="spectrum-Table-headCell">Setter</th>
-             <th  class="spectrum-Table-headCell">Description of output</th>
+             <th  class="spectrum-Table-headCell">セッター</th>
+             <th  class="spectrum-Table-headCell">出力の説明</th>
           </tr>
        </thead class="spectrum-Table-head">
        <tbody class="spectrum-Table-body">
           <tr class="spectrum-Table-row">
              <td class="spectrum-Table-cell" tabindex="0"><code>Theme.lightness</code></td>
-             <td class="spectrum-Table-cell" tabindex="0">Sets the theme&#39;s lightness value</td>
+             <td class="spectrum-Table-cell" tabindex="0">テーマの明度を設定</td>
           </tr>
           <tr class="spectrum-Table-row">
              <td class="spectrum-Table-cell" tabindex="0"><code>Theme.contrast</code></td>
-             <td class="spectrum-Table-cell" tabindex="0">Sets the theme&#39;s contrast value</td>
+             <td class="spectrum-Table-cell" tabindex="0">テーマのコントラスト値を設定</td>
           </tr>
           <tr class="spectrum-Table-row">
              <td class="spectrum-Table-cell" tabindex="0"><code>Theme.saturation</code></td>
-             <td class="spectrum-Table-cell" tabindex="0">Sets the theme&#39;s saturation value</td>
+             <td class="spectrum-Table-cell" tabindex="0">テーマの彩度を設定</td>
           </tr>
           <tr class="spectrum-Table-row">
              <td class="spectrum-Table-cell" tabindex="0"><code>Theme.backgroundColor</code></td>
-             <td class="spectrum-Table-cell" tabindex="0">Sets the theme&#39;s background color (creates a new <code>BackgroundColor</code> if passing a string)</td>
+             <td class="spectrum-Table-cell" tabindex="0">テーマの背景色を設定（文字列を渡すと新しい <code>BackgroundColor</code> を生成）</td>
           </tr>
           <tr class="spectrum-Table-row">
              <td class="spectrum-Table-cell" tabindex="0"><code>Theme.colors</code></td>
-             <td class="spectrum-Table-cell" tabindex="0">Sets colors for theme (must pass <code>Color</code>)</td>
+             <td class="spectrum-Table-cell" tabindex="0">テーマで使用する色を設定（<code>Color</code> を渡す必要があります）</td>
           </tr>
           <tr class="spectrum-Table-row">
              <td class="spectrum-Table-cell" tabindex="0"><code>Theme.output</code></td>
-             <td class="spectrum-Table-cell" tabindex="0">Sets output format for theme</td>
+             <td class="spectrum-Table-cell" tabindex="0">テーマの出力形式を設定</td>
           </tr>
           <tr class="spectrum-Table-row">
              <td class="spectrum-Table-cell" tabindex="0"><a href="#docs-themeaddcolor--color"><code>Theme.addColor</code></a></td>
-             <td class="spectrum-Table-cell" tabindex="0">Add a <code>Color</code> to the theme</td>
+             <td class="spectrum-Table-cell" tabindex="0">テーマに <code>Color</code> を追加</td>
           </tr>
           <tr class="spectrum-Table-row">
              <td class="spectrum-Table-cell" tabindex="0"><a href="#docs-themeremovecolor--color"><code>Theme.removeColor</code></a></td>

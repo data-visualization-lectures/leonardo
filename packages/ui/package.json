@@ -6,7 +6,7 @@
   "repository": "git@github.com:adobe/leonardo.git",
   "author": "Nate Baldwin <nbaldwin@adobe.com>",
   "scripts": {
-    "serve": "npx parcel src/index.html src/theme.html src/scales.html src/tools.html src/demo.html --no-hmr",
+    "serve": "PATH=./node_modules/.bin:$PATH parcel src/index.html src/theme.html src/scales.html src/tools.html src/demo.html --no-hmr",
     "clean": "rm -rf dist/*",
     "dev": "yarn copyIcons && yarn serve",
     "copyIcons": "mkdir -p dist && yarn copyWorkflowIcons && yarn copyUIIcons",
