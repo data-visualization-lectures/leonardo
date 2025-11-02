@@ -32,6 +32,13 @@ const DeltaE = require('delta-e');
 
 extendChroma(chroma);
 
+const cvdModeLabels = {
+  protanopia: '赤系の見え方（L錐体）',
+  deuteranopia: '緑系の見え方（M錐体）',
+  tritanopia: '青黄系の見え方（S錐体）',
+  achromatopsia: '全色盲'
+};
+
 const rangeInput = document.getElementById('qualitative_Threshold');
 const rangeLabel = document.getElementById('qualitative_ThresholdValue');
 const button = document.getElementById('qualitative_Generate');
@@ -519,7 +526,7 @@ function showSimulatedColors(array, sortBySimmilarity) {
         simArray.then((simColor) => {
           let label = document.createElement('h3');
           label.className = 'spectrum-Heading spectrum-Heading--sizeXXS';
-          label.innerHTML = `${capitalizeFirstLetter(mode)}`
+          label.innerHTML = cvdModeLabels[mode] || `${capitalizeFirstLetter(mode)}`
           wrap.appendChild(label);
   
           let originalIndicies = Array.from(Array(arr.length - 1).keys());
