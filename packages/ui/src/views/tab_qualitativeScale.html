@@ -6,22 +6,22 @@
         <div class="spectrum-Panel-Item">
           <div class="spectrum-Panel-Title">
             <h3 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXXS" id="{{ scaleType }}_nameLabel">
-              Scale name 
+              スケール名 
             </h3>
           </div>
           <div class="spectrum-Form">
             <div class="spectrum-Form-item">
               <div class="spectrum-Textfield spectrum-Textfield--sizeM spectrum-Textfield--fullwidth">
-                <input type="text" class="spectrum-Textfield-input" id="{{ scaleType }}_name" name="{{ scaleType }}_name" aria-labelledby="{{ scaleType }}_nameLabel" value="My qualitative scale">
+                <input type="text" class="spectrum-Textfield-input" id="{{ scaleType }}_name" name="{{ scaleType }}_name" aria-labelledby="{{ scaleType }}_nameLabel" value="質的スケール">
               </div>
             </div>
           </div>
         </div>
          <div class="spectrum-Panel-Item">
-            <span class="spectrum-Heading spectrum-Heading--sizeXXS spectrum-Panel-Item-Title">Source colors</span>
+            <span class="spectrum-Heading spectrum-Heading--sizeXXS spectrum-Panel-Item-Title">元の色</span>
             <div class="spectrum-Textfield spectrum-Textfield--multiline" id="qualitative_sampleColors-Wrapper">
               <textarea 
-                placeholder="Enter colors" 
+                placeholder="色を入力" 
                 name="qualitative_sampleColors" 
                 class="spectrum-Textfield-input" 
                 id="qualitative_sampleColors"
@@ -31,12 +31,12 @@
          </div>
 
          <div class="spectrum-Panel-Item">
-          <span class="spectrum-Heading spectrum-Heading--sizeXXS spectrum-Panel-Item-Title">Constraints</span>
+          <span class="spectrum-Heading spectrum-Heading--sizeXXS spectrum-Panel-Item-Title">制約</span>
           <div class="spectrum-Form spectrum-Form--row">
             <div class="spectrum-Form-item">
               <div id="" class="spectrum-Slider">
                 <div class="spectrum-Slider-labelContainer">
-                  <label class="spectrum-Slider-label" id="{{ scaleType }}_ThresholdLabel" for="{{ scaleType }}_Threshold">Color difference (min DeltaE)</label>
+                  <label class="spectrum-Slider-label" id="{{ scaleType }}_ThresholdLabel" for="{{ scaleType }}_Threshold">色差（最小 ΔE）</label>
                   <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="{{ scaleType }}_ThresholdLabel" id="{{ scaleType }}_ThresholdValue">11</div>
                 </div>
                 <input class="spectrum-Slider-controls" type="range" min="11" max="50" step="1" value="11" id="{{ scaleType }}_Threshold" name="{{ scaleType }}_Threshold"></input>
@@ -47,7 +47,7 @@
               <div class="spectrum-Switch">
                 <input type="checkbox" class="spectrum-Switch-input" id="{{ scaleType }}_minContrast" >
                 <span class="spectrum-Switch-switch"></span>
-                <label class="spectrum-Switch-label" for="{{ scaleType }}_minContrast">WCAG compliant</label>
+                <label class="spectrum-Switch-label" for="{{ scaleType }}_minContrast">WCAG 適合</label>
               </div>
             </div>
 
@@ -55,7 +55,7 @@
          </div>
 
          <div class="spectrum-Panel-Item">
-            <span class="spectrum-Heading spectrum-Heading--sizeXXS spectrum-Panel-Item-Title">Color vision deficiencies to support</span>
+            <span class="spectrum-Heading spectrum-Heading--sizeXXS spectrum-Panel-Item-Title">サポートする色覚特性</span>
             <div class="spectrum-Form spectrum-Form--row">
               <div class="spectrum-Form-item">
                 <label class="spectrum-Checkbox spectrum-Checkbox--sizeM">
@@ -68,7 +68,7 @@
                       <use xlink:href="#spectrum-css-icon-Dash100" />
                     </svg>
                   </span>
-                  <span class="spectrum-Checkbox-label">Protan (red/green)</span>
+                  <span class="spectrum-Checkbox-label">プロタン型（赤/緑）</span>
                 </label>
               </div>
               <div class="spectrum-Form-item">
@@ -82,7 +82,7 @@
                       <use xlink:href="#spectrum-css-icon-Dash100" />
                     </svg>
                   </span>
-                  <span class="spectrum-Checkbox-label">Deutan (red/green)</span>
+                  <span class="spectrum-Checkbox-label">デューテラン型（赤/緑）</span>
                 </label>
               </div>
             </div>
@@ -126,15 +126,15 @@
         <div class="spectrum-Panel-Item spectrum-Panel-Item--noPadding">
           <div class="spectrum-Panel-Item">
             <div class="spectrum-Panel-Title">
-              <h3 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXXS" id="outputFormatHeading">
-                Output
-              </h3>
+            <h3 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXXS" id="outputFormatHeading">
+              出力
+            </h3>
 
             </div>
             
             <div class="spectrum-Form spectrum-Form--row" style="margin-bottom: var(--spectrum-global-dimension-size-100); margin-top: 0">
               <div class="spectrum-Form-item">
-                <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left" for="{{ scaleType }}_format">Format</label>
+                <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left" for="{{ scaleType }}_format">形式</label>
                 <select class="spectrum-Picker spectrum-Picker--sizeM pickerOutputFormat pickerMode" id="{{ scaleType }}_format" name="{{ scaleType }}_format">
                   <span class="spectrum-Picker-iconWrapper">
                       <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="spectrum-Picker-icon spectrum-UIIcon-ChevronDownMedium spectrum-Picker-icon">
@@ -152,13 +152,13 @@
                 <div class="spectrum-Switch" id="{{ scaleType }}paramStringQuotesWrapper">
                   <input type="checkbox" class="spectrum-Switch-input" id="{{ scaleType }}paramStringQuotes">
                   <span class="spectrum-Switch-switch"></span>
-                  <label class="spectrum-Switch-label" for="{{ scaleType }}paramStringQuotes">Quotes</label>
+                <label class="spectrum-Switch-label" for="{{ scaleType }}paramStringQuotes">引用符</label>
                 </div>
               </div>
             </div>
 
             <div id="{{scaleType}}_selectedColors" class="sampleSwatches isEmpty">
-              Select generated colors to begin building your scale
+              生成された色を選択してスケール作成を開始してください
             </div>
 
             <div class="themeOutputParams" id="{{scaleType}}ColorScaleOutput"></div>
@@ -168,22 +168,22 @@
           <div class="spectrum-Panel-Item">
             <div class="spectrum-Panel-Title">
               <h3 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXXS" id="outputFormatHeading">
-                Export
+                エクスポート
               </h3>
               </div>
 
             <div class="spectrum-ActionGroup spectrum-ActionGroup--compact spectrum-Panel-ActionGroup">
-              <button title="Download Tableau xml file" id="{{ scaleType }}_downloadXml" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
+              <button title="Tableau の XML ファイルをダウンロード" id="{{ scaleType }}_downloadXml" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
                 <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Download">
                   <use xlink:href="#spectrum-icon-18-Download" />
                 </svg>
                 <span class="spectrum-ActionButton-label">Tableau (XML)</span>
               </button>
-              <button title="Download SVG colors" id="downloadQualitativeSwatches" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
+              <button title="カラーチップ SVG をダウンロード" id="downloadQualitativeSwatches" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
                 <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Download">
                   <use xlink:href="#spectrum-icon-18-Download" />
                 </svg>
-                <span class="spectrum-ActionButton-label">SVG colors</span>
+                <span class="spectrum-ActionButton-label">カラーチップSVG</span>
               </button>  
             </div>
 
@@ -195,12 +195,12 @@
   <main id="main_qualitative">
     <div class="scaleMainContent-Wrapper">
       <div class="colorScaleHeaderWrapper">
-        <h3 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXS">Generated color samples</h3>
-        <button class="spectrum-Button spectrum-Button--cta spectrum-Button--sizeM" id="qualitative_Generate" title="Generate new color options">
+        <h3 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXS">生成されたカラ―サンプル</h3>
+        <button class="spectrum-Button spectrum-Button--cta spectrum-Button--sizeM" id="qualitative_Generate" title="安全なカラーパレットを切り替え">
           <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Generate">
             <use xlink:href="#spectrum-icon-18-Refresh" />
           </svg>
-          <span class="spectrum-Button-label">Cycle safe color options</span>
+          <span class="spectrum-Button-label">安全なカラーパレットを切り替え</span>
         </button>        
       </div>
       <div class="" id="{{scaleType}}_generatedColors">
@@ -210,13 +210,13 @@
       <div id="" class="spectrum-Content-Tabs spectrum-Content-Tabs--noPadding">
         <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--quiet">
           <div id="tab{{scaleType}}Demo" class="spectrum-Tabs-item {{scaleType}}-Tabs-item" tabindex="0" onclick="openScaleTab(event, '{{ scaleType }}DemoWrapper', `{{ scaleType }}`)">
-            <label class="spectrum-Tabs-itemLabel">Visualize</label>
+            <label class="spectrum-Tabs-itemLabel">ビジュアライズ</label>
           </div>
           <div id="tab{{scaleType}}Simulation" class="spectrum-Tabs-item {{scaleType}}-Tabs-item" tabindex="0" onclick="openScaleTab(event, '{{ scaleType }}SimulationWrapper', `{{ scaleType }}`)">
-            <label class="spectrum-Tabs-itemLabel">Simulations</label>
+            <label class="spectrum-Tabs-itemLabel">シミュレーション</label>
           </div>
           <div id="tab{{scaleType}}Charts" class="spectrum-Tabs-item {{scaleType}}-Tabs-item" tabindex="0" onclick="openScaleTab(event, '{{ scaleType }}ChartsWrapper', `{{ scaleType }}`)">
-            <label class="spectrum-Tabs-itemLabel">Analyze</label>
+            <label class="spectrum-Tabs-itemLabel">分析</label>
           </div>
         </div>
 
@@ -240,7 +240,7 @@
         
         <hr class="spectrum-Divider spectrum-Divider--sizeS"/>
         <p class="spectrum-Body spectrum-Body--sizeS"> 
-          Visualizations from <a class="spectrum-Link" href="https://www.d3-graph-gallery.com/" target="_blank">d3-graph-gallery</a>
+          ビジュアライゼーションは <a class="spectrum-Link" href="https://www.d3-graph-gallery.com/" target="_blank">d3-graph-gallery</a> を使用しています
         </p>
       </div>
 
@@ -249,7 +249,7 @@
           <!-- Column 1 -->
           <div class="chartsColumn--left">
             <label for="{{ scaleType }}_chartsMode" class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXXS">
-              Analysis color space
+              分析用色空間
             </label>
             <div class="spectrum-Form-item spectrum-Form-item--row" style="display: inline-flex">
                 <select class="spectrum-Picker spectrum-Picker--sizeM chartsMode" name="{{ scaleType }}_chartsMode" id="{{ scaleType }}_chartsMode">
@@ -269,7 +269,7 @@
             </div>
       
             <p class="spectrum-Body spectrum-Body--sizeXS" style="margin-top: var(--spectrum-global-dimension-size-100)">
-              Charts and models will display in the selected color space. 
+              チャートとモデルは選択した色空間で表示されます。 
             </p>
 
             <div id="{{ scaleType }}ColorWheelWrapper" class="tab-ColorWheel">

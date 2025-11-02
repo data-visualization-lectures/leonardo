@@ -6,13 +6,13 @@
         <div class="spectrum-Panel-Item">
           <div class="spectrum-Panel-Title">
             <h3 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXXS" id="{{ scaleType }}_nameLabel">
-              Scale name 
+              スケール名 
             </h3>
           </div>
           <div class="spectrum-Form">
             <div class="spectrum-Form-item">
               <div class="spectrum-Textfield spectrum-Textfield--sizeM spectrum-Textfield--fullwidth">
-                <input type="text" class="spectrum-Textfield-input" id="{{ scaleType }}_name" name="{{ scaleType }}_name" aria-labelledby="{{ scaleType }}_nameLabel" value="My sequential scale">
+                <input type="text" class="spectrum-Textfield-input" id="{{ scaleType }}_name" name="{{ scaleType }}_name" aria-labelledby="{{ scaleType }}_nameLabel" value="連続的スケール">
               </div>
             </div>
           </div>
@@ -20,9 +20,9 @@
          <div class="spectrum-Panel-Item">
             <div class="spectrum-Form spectrum-Form--row themeColor_configs" id="{{ scaleType }}-themeColor_configs">
                <div class="themeColor_subheading">
-                  <h4 class="spectrum-Heading spectrum-Heading--sizeXXS">Key colors</h4>
+                  <h4 class="spectrum-Heading spectrum-Heading--sizeXXS">主要色</h4>
                   <div class="keyColorActions">
-                     <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet" id="{{ scaleType }}_addKeyColor" title="Add key color">
+                     <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet" id="{{ scaleType }}_addKeyColor" title="主要色を追加">
                         <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Add">
                            <use xlink:href="#spectrum-icon-18-Add"></use>
                         </svg>
@@ -36,11 +36,11 @@
 
          <div class="spectrum-Panel-Item">
           <div class="spectrum-Panel-Title">
-            <h4 class="spectrum-Heading spectrum-Heading--sizeXXS">Interpolation options</h4>
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXXS">補間オプション</h4>
           </div>
           <div class="spectrum-Form spectrum-Form--row" id="{{ scaleType }}-themeColor_keyColors">
                <div class="spectrum-Form-item spectrum-Form-item--row">
-                  <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left">Color space</label>
+                  <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left">色空間</label>
                   <select class="spectrum-Picker spectrum-Picker--sizeM pickerMode" id="{{ scaleType }}_mode" name="{{ scaleType }}_mode">
                      <span class="spectrum-Picker-iconWrapper">
                         <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="spectrum-Picker-icon spectrum-UIIcon-ChevronDownMedium spectrum-Picker-icon">
@@ -63,7 +63,7 @@
                   <div class="spectrum-Switch is-disabled" id="{{ scaleType }}_smoothWrapper">
                     <input type="checkbox" class="spectrum-Switch-input" id="{{ scaleType }}_smooth" disabled>
                     <span class="spectrum-Switch-switch"></span>
-                    <label class="spectrum-Switch-label" for="{{ scaleType }}_smooth">Smooth</label>
+                    <label class="spectrum-Switch-label" for="{{ scaleType }}_smooth">スムージング</label>
                   </div>
                </div>
             </div>
@@ -75,18 +75,18 @@
         <div class="spectrum-Panel-Item">
           <div class="spectrum-Panel-Title">
             <h3 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXXS" id="outputFormatHeading">
-              Output
+              カラーチップ
             </h3>
           </div>
           <div class="spectrum-Form spectrum-Form--row" style="margin-bottom: var(--spectrum-global-dimension-size-100); margin-top: 0">
             <div class="spectrum-Form-item">
-              <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left" for="{{ scaleType }}Samples">Quantity</label>
+              <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left" for="{{ scaleType }}Samples">色数</label>
               <div id="" class="spectrum-Textfield pickerMode">
                 <input class="spectrum-Textfield-input " type="number" min="2" max="100" step="1" value="7" id="{{ scaleType }}Samples" name="{{ scaleType }}Samples"></input>
               </div>
             </div>
             <div class="spectrum-Form-item">
-              <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left" for="{{ scaleType }}_format">Format</label>
+              <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left" for="{{ scaleType }}_format">形式</label>
               <select class="spectrum-Picker spectrum-Picker--sizeM pickerOutputFormat pickerMode" id="{{ scaleType }}_format" name="{{ scaleType }}_format">
                 <span class="spectrum-Picker-iconWrapper">
                     <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="spectrum-Picker-icon spectrum-UIIcon-ChevronDownMedium spectrum-Picker-icon">
@@ -104,7 +104,7 @@
               <div class="spectrum-Switch" id="{{ scaleType }}paramStringQuotesWrapper">
                 <input type="checkbox" class="spectrum-Switch-input" id="{{ scaleType }}paramStringQuotes">
                 <span class="spectrum-Switch-switch"></span>
-                <label class="spectrum-Switch-label" for="{{ scaleType }}paramStringQuotes">Quotes</label>
+                <label class="spectrum-Switch-label" for="{{ scaleType }}paramStringQuotes">引用符</label>
               </div>
             </div>
           </div>
@@ -118,27 +118,27 @@
         <div class="spectrum-Panel-Item">
           <div class="spectrum-Panel-Title">
             <h3 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXXS">
-              Export 
+              エクスポート 
             </h3>
           </div>
           <div class="spectrum-ActionGroup spectrum-ActionGroup--compact spectrum-Panel-ActionGroup">
-            <button title="Download Tableau xml file" id="{{ scaleType }}_downloadXml" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
+            <button title="Tableau の XML ファイルをダウンロード" id="{{ scaleType }}_downloadXml" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
               <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Download">
                 <use xlink:href="#spectrum-icon-18-Download" />
               </svg>
               <span class="spectrum-ActionButton-label">Tableau (XML)</span>
             </button>
-            <button title="Download SVG colors" id="downloadSequentialSwatches" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
+            <button title="カラーチップ SVG をダウンロード" id="downloadSequentialSwatches" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
               <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Download">
                 <use xlink:href="#spectrum-icon-18-Download" />
               </svg>
-              <span class="spectrum-ActionButton-label">SVG colors</span>
+              <span class="spectrum-ActionButton-label">カラーチップSVG</span>
             </button>  
-            <button title="Download SVG gradient" id="{{ scaleType }}_downloadGradient" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
+            <button title="カラーグラデーション SVG をダウンロード" id="{{ scaleType }}_downloadGradient" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
               <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Download">
                 <use xlink:href="#spectrum-icon-18-Download" />
               </svg>
-              <span class="spectrum-ActionButton-label">SVG gradient</span>
+              <span class="spectrum-ActionButton-label">カラーグラデーションSVG</span>
             </button>
           </div>
         </div>
@@ -148,24 +148,24 @@
 
   <main id="main_sequential">
     <div class="scaleMainContent-Wrapper">
-      <h2 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXS colorScaleHeaderWrapper">Color scale</h2>
+      <h2 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXS colorScaleHeaderWrapper">カラーグラデーション</h2>
       <div class="themeColor_gradient" id="{{scaleType}}_gradient">
       </div>
 
       <div id="" class="spectrum-Content-Tabs spectrum-Content-Tabs--noPadding">
         <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--quiet">
           <div id="tab{{scaleType}}Demo" class="spectrum-Tabs-item {{scaleType}}-Tabs-item" tabindex="0" onclick="openScaleTab(event, '{{ scaleType }}DemoWrapper', `{{ scaleType }}`)">
-            <label class="spectrum-Tabs-itemLabel">Visualize</label>
+            <label class="spectrum-Tabs-itemLabel">ビジュアライズ</label>
           </div>
           <div id="tab{{scaleType}}Charts" class="spectrum-Tabs-item {{scaleType}}-Tabs-item" tabindex="0" onclick="openScaleTab(event, '{{ scaleType }}ChartsWrapper', `{{ scaleType }}`)">
-            <label class="spectrum-Tabs-itemLabel">Analyze</label>
+            <label class="spectrum-Tabs-itemLabel">分析</label>
           </div>
         
           <div id="tab{{scaleType}}Model" class="spectrum-Tabs-item {{scaleType}}-Tabs-item" tabindex="0" onclick="openScaleTab(event, '{{ scaleType }}ModelWrapper', `{{ scaleType }}`)">
-            <label class="spectrum-Tabs-itemLabel">Model</label>
+            <label class="spectrum-Tabs-itemLabel">モデル</label>
           </div>
           <div id="tab{{scaleType}}Accessibility" class="spectrum-Tabs-item {{scaleType}}-Tabs-item" tabindex="0" onclick="openScaleTab(event, '{{ scaleType }}AccessibilityWrapper', `{{ scaleType }}`)">
-            <label class="spectrum-Tabs-itemLabel">Accessibility</label>
+            <label class="spectrum-Tabs-itemLabel">アクセシビリティ</label>
           </div>
         </div>
       </div>
@@ -182,7 +182,7 @@
         
         <hr class="spectrum-Divider spectrum-Divider--sizeS"/>
         <p class="spectrum-Body spectrum-Body--sizeS"> 
-          Visualizations from <a class="spectrum-Link" href="https://www.d3-graph-gallery.com/" target="_blank">d3-graph-gallery</a>
+          ビジュアライゼーションは <a class="spectrum-Link" href="https://www.d3-graph-gallery.com/" target="_blank">d3-graph-gallery</a> を使用しています
         </p>
       </div>
 
@@ -191,7 +191,7 @@
           <!-- Column 1 -->
           <div class="chartsColumn--left">
             <label for="{{ scaleType }}_chartsMode" class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXXS">
-              Analysis color space
+              分析用色空間
             </label>
             <div class="spectrum-Form-item spectrum-Form-item--row" style="display: inline-flex">
                 <select class="spectrum-Picker spectrum-Picker--sizeM chartsMode" name="{{ scaleType }}_chartsMode" id="{{ scaleType }}_chartsMode">
@@ -211,7 +211,7 @@
             </div>
       
             <p class="spectrum-Body spectrum-Body--sizeXS" style="margin-top: var(--spectrum-global-dimension-size-100)">
-              Charts and models will display in the selected color space. 
+              チャートとモデルは選択した色空間で表示されます。 
             </p>
 
             <div id="{{ scaleType }}ColorWheelWrapper" class="tab-ColorWheel">
@@ -221,20 +221,20 @@
             </div>
 
             <div class="chart--labelless" id="{{scaleType}}RGBchart">
-              RGB chart
+              RGB チャート
             </div>
           </div>
 
           <!-- Column 2 -->
           <div class="chartsColumn--right">
             <div class="chart--labelless" id="{{scaleType}}InterpolationChart">
-              chart 1
+              チャート 1
             </div>
             <div class="chart--labelless" id="{{scaleType}}InterpolationChart2">
-              chart 2
+              チャート 2
             </div>  
             <div class="chart--labelless" id="{{scaleType}}InterpolationChart3">
-              chart 3
+              チャート 3
             </div>   
           </div>
         </div>
