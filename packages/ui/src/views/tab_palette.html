@@ -5,10 +5,10 @@
       <div class="spectrum-Panel-Tabs">
         <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--quiet">
           <div id="tabPanelColorScales" class="spectrum-Tabs-item panel-Tabs-item" tabindex="0" onclick="openPanelTab(event, 'colorScales')">
-            <label class="spectrum-Tabs-itemLabel">Color scales</label>
+            <label class="spectrum-Tabs-itemLabel">カラースケール</label>
           </div>
           <div id="tabPanelContrastSwatches" class="spectrum-Tabs-item panel-Tabs-item" tabindex="0" onclick="openPanelTab(event, 'contrastSwatches')">
-            <label class="spectrum-Tabs-itemLabel">Lightness stops</label>
+            <label class="spectrum-Tabs-itemLabel">明度ステップ</label>
           </div>
         </div>
       </div>
@@ -19,20 +19,20 @@
               <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Add Color">
                 <use xlink:href="#spectrum-icon-18-Add" />
               </svg>
-              <span class="spectrum-ActionButton-label">Add color</span>
+              <span class="spectrum-ActionButton-label">カラーを追加</span>
             </button>
             <label tabindex="0" id="image-upload-button" for="image-upload" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
               <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Add Color">
                 <use xlink:href="#spectrum-icon-18-Image" />
               </svg>
-              <span class="spectrum-ActionButton-label">Extract from image</span>
+              <span class="spectrum-ActionButton-label">画像から抽出</span>
             </label>
             <input id="image-upload" type="file" style="display:none;" onInput="addColorsFromImage()"/>
-            <button title="Sort ratios ascending" id="sort" onclick="sortColorScales()" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
+            <button title="比率を昇順で並べ替え" id="sort" onclick="sortColorScales()" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
               <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="spectrum-Icon spectrum-Icon--sizeS sortIcon" focusable="false" aria-hidden="true" aria-label="Sort">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
-              <span class="spectrum-ActionButton-label">Sort</span>
+              <span class="spectrum-ActionButton-label">並べ替え</span>
             </button>
           </div>
           <div id="image-preview"></div>
@@ -41,7 +41,7 @@
 
         <div id="themeColorWrapper">
           <div id="themeColorEmptyState" class="spectrum-IllustratedMessage">  
-            <h2 class="spectrum-Typography spectrum-Heading spectrum-Heading3 spectrum-IllustratedMessage-heading">Add a color scale to begin</h2> 
+            <h2 class="spectrum-TypTypography spectrum-Heading spectrum-Heading3 spectrum-IllustratedMessage-heading">カラースケールを追加して開始してください</h2> 
           </div>
         </div>
 
@@ -54,24 +54,24 @@
               <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Add lightness stop">
                 <use xlink:href="#spectrum-icon-18-Add" />
               </svg>
-              <span class="spectrum-ActionButton-label">Add</span>
+              <span class="spectrum-ActionButton-label">追加</span>
             </button>
             <button id="bulkLightnessButton" onclick="addLightnessBulk()" class="spectrum-ActionButton spectrum-ActionButton--sizeM  spectrum-ActionGroup-item">
               <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Import from colors">
                 <use xlink:href="#spectrum-icon-18-BoxAdd" />
               </svg>
-              <span class="spectrum-ActionButton-label">Import</span>
+              <span class="spectrum-ActionButton-label">インポート</span>
             </button>
-            <button title="Sort ratios ascending" id="sort" onclick="sortRatios()" class="spectrum-ActionButton spectrum-ActionButton--sizeM  spectrum-ActionGroup-item">
+            <button title="比率を昇順で並べ替え" id="sort" onclick="sortRatios()" class="spectrum-ActionButton spectrum-ActionButton--sizeM  spectrum-ActionGroup-item">
               <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="spectrum-Icon spectrum-Icon--sizeS sortIcon" focusable="false" aria-hidden="true" aria-label="Sort">
                 <use xlink:href="#spectrum-css-icon-Arrow100" />
               </svg>
-              <span class="spectrum-ActionButton-label">Sort</span>
+              <span class="spectrum-ActionButton-label">並べ替え</span>
             </button>
             <select class="spectrum-Picker spectrum-Picker--sizeM spectrum-ActionGroup-item" name="distribute" id="distribute">
-              <option value="none">Distribute</option>
-              <option value="ratios">Contrast ratios</option>
-              <option value="luminosity">Lightness</option>
+              <option value="none">分布しない</option>
+              <option value="ratios">コントラスト比</option>
+              <option value="luminosity">明度</option>
             </select>  
           </div>
   
@@ -80,9 +80,9 @@
             <div id="luminosityGradient"></div>
             <div id="ratioInput-wrapper">
               <div class="ratioGrid">
-                <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM ratioGrid--ratio" id="ratioInputLabel">WCAG 2 contrast</label>  
-                <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM ratioGrid--luminosity">Lightness</label>  
-                <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM ratioGrid--status">Status</label>  
+                <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM ratioGrid--ratio" id="ratioInputLabel">WCAG 2 コントラスト</label>  
+                <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM ratioGrid--luminosity">明度</label>  
+                <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM ratioGrid--status">ステータス</label>  
               </div>
             </div>
           </div>
@@ -108,13 +108,13 @@
       <div id="" class="spectrum-Content-Tabs">
         <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--quiet">
           <div id="tabColorWheel" class="spectrum-Tabs-item color-Tabs-item" tabindex="0" onclick="openColorTab(event, 'previewWrapper')">
-            <label class="spectrum-Tabs-itemLabel">Theme colors</label>
+            <label class="spectrum-Tabs-itemLabel">テーマカラー</label>
           </div>
           <div id="tabPaletteCharts" class="spectrum-Tabs-item color-Tabs-item" tabindex="0" onclick="openColorTab(event, 'paletteChartsWrapper')">
-            <label class="spectrum-Tabs-itemLabel">Chromaticity</label>
+            <label class="spectrum-Tabs-itemLabel">色度</label>
           </div>
           <div id="tabPaletteContrastCharts" class="spectrum-Tabs-item color-Tabs-item" tabindex="0" onclick="openColorTab(event, 'paletteContrastChartsWrapper')">
-            <label class="spectrum-Tabs-itemLabel">Lightness</label>
+            <label class="spectrum-Tabs-itemLabel">明度</label>
           </div>
           <div id="tabPaletteModel" class="spectrum-Tabs-item color-Tabs-item" tabindex="0" onclick="openColorTab(event, 'paletteModelWrapper')">
             <label class="spectrum-Tabs-itemLabel">3d model</label>
@@ -132,13 +132,13 @@
         <div class="paletteContrastChartsGrid">
   
           <div class="spectrum-Form spectrum-Form--row" style="justify-content: space-between;">
-            <h5 class="spectrum-Heading spectrum-Heading--sizeXXS">Monochromatic preview (ordered by contrast ascending)</h5>
+            <h5 class="spectrum-Heading spectrum-Heading--sizeXXS">モノクロプレビュー（コントラスト昇順）</h5>
   
             <div class="spectrum-Form-item spectrum-Form-item--row">
-              <label for="chartLineType" class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left">Chart line type</label>
+              <label for="chartLineType" class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left">チャートの線種</label>
                 <select class="spectrum-Picker spectrum-Picker--sizeM" name="chartLineType" id="chartLineType">
-                  <option value="step">Steps</option>
-                  <option value="curve">Curve</option>
+                  <option value="step">ステップ</option>
+                  <option value="curve">曲線</option>
                   <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="spectrum-Picker-icon spectrum-UIIcon-ChevronDownMedium spectrum-Picker-icon">
                     <use xlink:href="#spectrum-css-icon-ChevronDownMedium"></use>
                   </svg>
@@ -153,11 +153,11 @@
           
           <div id="contrastChartsWrapper">
             <div>
-              <h5 class="spectrum-Heading spectrum-Heading--sizeXXS">Contrast</h5>
+              <h5 class="spectrum-Heading spectrum-Heading--sizeXXS">コントラスト</h5>
               <div class="panel-SubTab-Content" id="contrastChart"></div>
             </div>
             <div>
-              <h5 class="spectrum-Heading spectrum-Heading--sizeXXS">Lightness</h5>
+              <h5 class="spectrum-Heading spectrum-Heading--sizeXXS">明度</h5>
               <div class="panel-SubTab-Content" id="luminosityChart"></div>
             </div>
           </div>
@@ -175,11 +175,11 @@
               </div>
     
               <div class="spectrum-Form" id="chartsControls">
-                <h3 class="spectrum-Heading spectrum-Heading--sizeXXS ">Color wheel settings</h3>
+                <h3 class="spectrum-Heading spectrum-Heading--sizeXXS ">カラーホイール設定</h3>
                 <div class="spectrum-Form-item">
                   <div id="colorWheelLightnessWrapper" class="spectrum-Slider">
                     <div class="spectrum-Slider-labelContainer">
-                      <label class="spectrum-Slider-label" id="colorWheelLightnessLabel" for="colorWheelLightness">Color wheel lightness</label>
+                      <label class="spectrum-Slider-label" id="colorWheelLightnessLabel" for="colorWheelLightness">カラーホイールの明度</label>
                     </div>
                     <input class="spectrum-Slider-controls" type="range" min="0" max="100" value="50" id="colorWheelLightness" name="colorWheelLightness"></input>
                   </div>
@@ -189,22 +189,22 @@
                   <div class="spectrum-Switch">
                     <input type="checkbox" class="spectrum-Switch-input" id="colorPathsSwitch">
                     <span class="spectrum-Switch-switch"></span>
-                    <label class="spectrum-Switch-label" for="colorPathsSwitch">Show interpolation paths</label>
+                    <label class="spectrum-Switch-label" for="colorPathsSwitch">補間経路を表示</label>
                   </div>
                </div>
                <div class="spectrum-Form-item">
                 <div class="spectrum-Switch">
                   <input type="checkbox" class="spectrum-Switch-input" id="colorHarmonyLinesSwitch" checked>
                   <span class="spectrum-Switch-switch"></span>
-                  <label class="spectrum-Switch-label" for="colorHarmonyLinesSwitch">Show color harmony lines</label>
+                  <label class="spectrum-Switch-label" for="colorHarmonyLinesSwitch">色相調和線を表示</label>
                 </div>
               </div>
     
                 <div class="spectrum-Form-item">
-                  <label for="colorDotsMode" class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left">Color dots display</label>
+                  <label for="colorDotsMode" class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left">カラードット表示</label>
                     <select class="spectrum-Picker spectrum-Picker--sizeM" name="colorDotsMode" id="colorDotsMode">
-                      <option value="colorScale">Scale cross-sections</option>
-                      <option value="colorKeys">All key colors</option>
+                      <option value="colorScale">スケール断面</option>
+                      <option value="colorKeys">すべての主要色</option>
                       <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="spectrum-Picker-icon spectrum-UIIcon-ChevronDownMedium spectrum-Picker-icon">
                         <use xlink:href="#spectrum-css-icon-ChevronDownMedium"></use>
                       </svg>

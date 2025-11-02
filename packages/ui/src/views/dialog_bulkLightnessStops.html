@@ -1,24 +1,24 @@
 <div class="spectrum-Dialog spectrum-Dialog--small spectrum-Dialog--confirmation" id="addBulkLightnessDialog">
   <div class="spectrum-Dialog-grid">
-    <h2 class="spectrum-Dialog-heading">Import lightness stops</h2>
+    <h2 class="spectrum-Dialog-heading">明度ステップをインポート</h2>
     <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider"/>
     <section class="spectrum-Dialog-content">
       <span class="spectrum-Typography">
-        <p class="spectrum-Body4">Enter hex colors separated by comma or new line.</p>
-        <p class="spectrum-Body4">These will be converted and added as <b>lightness stops<b>. </p>
+        <p class="spectrum-Body4">16 進カラーコードをカンマまたは改行で区切って入力してください。</p>
+        <p class="spectrum-Body4">入力した色は<b>明度ステップ</b>として追加されます。</p>
       </span>
       <div class="spectrum-Form spectrum-Form--labelsAbove">
         <div class="spectrum-Form-item">
-          <label for="fieldLabelExample-lifestory" class="spectrum-Form-itemLabel">Colors (Hex)</label>
+          <label for="fieldLabelExample-lifestory" class="spectrum-Form-itemLabel">色（HEX）</label>
           <div class="spectrum-Textfield spectrum-Textfield--multiline" style="width:100%;">
-            <textarea id="bulkLightnessColors" class="spectrum-Textfield-input" placeholder="Enter colors here"></textarea>
+            <textarea id="bulkLightnessColors" class="spectrum-Textfield-input" placeholder="ここに色を入力"></textarea>
           </div>
         </div>
       </div>
     </section>
     <div class="spectrum-ButtonGroup spectrum-Dialog-buttonGroup spectrum-Dialog-buttonGroup--noFooter">
-      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary spectrum-ButtonGroup-item" onclick="cancelLightnessBulk()">Cancel</button>
-      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--cta spectrum-ButtonGroup-item" onclick="bulkLightnessInput()">Add</button>
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary spectrum-ButtonGroup-item" onclick="cancelLightnessBulk()">キャンセル</button>
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--cta spectrum-ButtonGroup-item" onclick="bulkLightnessInput()">追加</button>
 
     </div>
   </div>

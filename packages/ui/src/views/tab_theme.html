@@ -5,27 +5,27 @@
     <div class="spectrum-Content-Tabs">
       <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--quiet">
         <div id="tabJSParameters" class="spectrum-Tabs-item main-Tabs-item" tabindex="0" onclick="openTab(event, 'parameterWrapper')">
-          <label class="spectrum-Tabs-itemLabel">Javascript</label>
+          <label class="spectrum-Tabs-itemLabel">JavaScript</label>
         </div>
         <div id="tabCSS" class="spectrum-Tabs-item main-Tabs-item" tabindex="0" onclick="openTab(event, 'cssWrapper')">
           <label class="spectrum-Tabs-itemLabel">CSS</label>
         </div>
         <div id="tabTokens" class="spectrum-Tabs-item main-Tabs-item" tabindex="0"  onclick="openTab(event, 'tokensWrapper')">
-          <label class="spectrum-Tabs-itemLabel">Design tokens</label>
+          <label class="spectrum-Tabs-itemLabel">デザイントークン</label>
         </div>
       </div>
     </div>
     <div id="parameterWrapper" class="tabcontent">
       <div class="tabHeader"> 
         <div>
-          <h2 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXS">Parameters for @adobe/leonardo-contrast-colors</h2>
-          <p class="spectrum-Body spectrum-Body--sizeXS">See 
-            <a href="#" class="spectrum-Link" target="_blank">Getting started</a> 
-            for information on how to use these parameters.
+          <h2 class="spectrum-TypTypography spectrum-Heading spectrum-Heading--sizeXS">@adobe/leonardo-contrast-colors 用パラメーター</h2>
+          <p class="spectrum-Body spectrum-Body--sizeXS">使い方の詳細は
+            <a href="#" class="spectrum-Link" target="_blank">クイックスタート</a>
+            を参照してください。
           </p>
         </div>
         <button id="copyThemeParams" data-clipboard-target="#themeJSParams" class="spectrum-ActionButton spectrum-ActionButton--sizeM copyButton">
-          <span class="spectrum-ActionButton-label">Copy parameters</span>
+          <span class="spectrum-ActionButton-label">パラメーターをコピー</span>
         </button>
       </div>
 
@@ -36,9 +36,9 @@
 
     <div id="cssWrapper" class="tabcontent">
       <div class="tabHeader">
-        <h2 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXS">CSS properties</h2>
+        <h2 class="spectrum-TypTypography spectrum-Heading spectrum-Heading--sizeXS">CSS プロパティ</h2>
         <button id="copyThemeCSS" data-clipboard-target="#themeCSSParams" class="spectrum-ActionButton spectrum-ActionButton--sizeM copyButton">
-          <span class="spectrum-ActionButton-label">Copy CSS</span>
+          <span class="spectrum-ActionButton-label">CSS をコピー</span>
         </button>
       </div>
 
@@ -50,14 +50,13 @@
     <div id="tokensWrapper" class="tabcontent">
       <div class="tabHeader">
         <div>
-          <h2 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXS">Design tokens</h2>
-          <p class="spectrum-Body spectrum-Body--sizeXS">See 
-            <a href="https://www.w3.org/community/design-tokens/" class="spectrum-Link" target="_blank">w3c working group spec</a> 
-            for details.
+          <h2 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXS">デザイントークン</h2>
+          <p class="spectrum-Body spectrum-Body--sizeXS">
+            詳細は <a href="https://www.w3.org/community/design-tokens/" class="spectrum-Link" target="_blank">W3C ワーキンググループの仕様</a> を参照してください。
           </p>
         </div>
         <button id="copyThemeTokens" data-clipboard-target="#themeTokensParams" class="spectrum-ActionButton spectrum-ActionButton--sizeM copyButton">
-          <span class="spectrum-ActionButton-label">Copy Tokens</span>
+          <span class="spectrum-ActionButton-label">トークンをコピー</span>
         </button>
       </div>
 
@@ -72,8 +71,8 @@
     <div class="spectrum-Panel-ContentWrapper">
       <div class="spectrum-Panel-Item">
         <div class="spectrum-Panel-Title">
-          <h3 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXXS" id="outputFormatHeading">
-            Output color format
+          <h3 class="spectrum-TypTypography spectrum-Heading spectrum-Heading--sizeXXS" id="outputFormatHeading">
+            出力カラーフォーマット
           </h3>
         </div>
         <div class="spectrum-Form spectrum-Form--spaced" style="margin-top: var(--spectrum-global-dimension-size-100)">
@@ -88,9 +87,9 @@
                 <use xlink:href="#spectrum-css-icon-ChevronDownMedium"></use>
               </svg>
             </select>
-            <p class="spectrum-Body spectrum-Body--sizeXS" style="margin-top: var(--spectrum-global-dimension-size-100)">Output formats compliant with 
+            <p class="spectrum-Body spectrum-Body--sizeXS" style="margin-top: var(--spectrum-global-dimension-size-100)">出力形式は
               <a class="spectrum-Link" href="https://www.w3.org/TR/css-color-4/" target="_blank">CSS Color Module Level 4</a>
-              . Not all formats supported.</p>
+              に準拠しています（一部フォーマットは未対応）。</p>
           </div>
         </div>
       </div>

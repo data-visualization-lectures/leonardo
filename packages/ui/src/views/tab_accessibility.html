@@ -6,20 +6,20 @@
       <div class="spectrum-Panel-Item spectrum-Panel-Item--noPadding">
         <div class="spectrum-Panel-Item">
           <div class="spectrum-Panel-Title">
-            <h3 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXXS" id="{{ scaleType }}_nameLabel">
-              WCAG compliance
+            <h3 class="spectrum-TypTypography spectrum-Heading spectrum-Heading--sizeXXS" id="{{ scaleType }}_nameLabel">
+              WCAG 適合性
             </h3>
           </div>
           <div class="spectrum-Form spectrum-Form--row">
             <div class="spectrum-Form-item">
-              <label for="theme_complianceVersion" class="spectrum-FieldLabel spectrum-FieldLabel--left spectrum-Fieldlabel--sizeM">Version</label>
+              <label for="theme_complianceVersion" class="spectrum-FieldLabel spectrum-FieldLabel--left spectrum-Fieldlabel--sizeM">バージョン</label>
               <select class="spectrum-Picker spectrum-Picker--sizeM spectrum-ActionGroup-item pickerCompliance" name="theme_complianceVersion" id="theme_complianceVersion">
                 <option value="2">2.0</option>
                 <!-- <option value="3">3.0</option> -->
               </select>  
             </div>
             <div class="spectrum-Form-item">
-              <label for="theme_complianceLevel" class="spectrum-FieldLabel spectrum-FieldLabel--left spectrum-Fieldlabel--sizeM">Level</label>
+              <label for="theme_complianceLevel" class="spectrum-FieldLabel spectrum-FieldLabel--left spectrum-Fieldlabel--sizeM">レベル</label>
               <select class="spectrum-Picker spectrum-Picker--sizeM spectrum-ActionGroup-item pickerCompliance" name="theme_complianceLevel" id="theme_complianceLevel">
                 <option value="AA">AA</option>
                 <option value="AAA">AAA</option>
@@ -30,12 +30,12 @@
         </div>
 
          <div class="spectrum-Panel-Item">
-          <span class="spectrum-Heading spectrum-Heading--sizeXXS spectrum-Panel-Item-Title">Colorblind support</span>
+          <span class="spectrum-Heading spectrum-Heading--sizeXXS spectrum-Panel-Item-Title">色覚特性サポート</span>
           <div class="spectrum-Form spectrum-Form--row">
             <div class="spectrum-Form-item">
               <div id="" class="spectrum-Slider">
                 <div class="spectrum-Slider-labelContainer">
-                  <label class="spectrum-Slider-label" id="{{ scaleType }}_ThresholdLabel" for="{{ scaleType }}_Threshold">Color difference (min DeltaE)</label>
+                  <label class="spectrum-Slider-label" id="{{ scaleType }}_ThresholdLabel" for="{{ scaleType }}_Threshold">色差（最小 ΔE）</label>
                   <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="{{ scaleType }}_ThresholdLabel" id="{{ scaleType }}_ThresholdValue">11</div>
                 </div>
                 <input class="spectrum-Slider-controls" type="range" min="11" max="50" step="1" value="11" id="{{ scaleType }}_Threshold" name="{{ scaleType }}_Threshold"></input>
@@ -46,7 +46,7 @@
               <div class="spectrum-Switch">
                 <input type="checkbox" class="spectrum-Switch-input" id="{{ scaleType }}_minContrast" >
                 <span class="spectrum-Switch-switch"></span>
-                <label class="spectrum-Switch-label" for="{{ scaleType }}_minContrast">1.4.11 compliant</label>
+                <label class="spectrum-Switch-label" for="{{ scaleType }}_minContrast">1.4.11 適合</label>
               </div>
             </div>
 
@@ -63,7 +63,7 @@
                       <use xlink:href="#spectrum-css-icon-Dash100" />
                     </svg>
                   </span>
-                  <span class="spectrum-Checkbox-label">Protan (red/green)</span>
+                  <span class="spectrum-Checkbox-label">プロタン型（赤/緑）</span>
                 </label>
               </div>
               <div class="spectrum-Form-item">
@@ -77,7 +77,7 @@
                       <use xlink:href="#spectrum-css-icon-Dash100" />
                     </svg>
                   </span>
-                  <span class="spectrum-Checkbox-label">Deutan (red/green)</span>
+                  <span class="spectrum-Checkbox-label">デューテラン型（赤/緑）</span>
                 </label>
               </div>
             </div>
@@ -93,7 +93,7 @@
                       <use xlink:href="#spectrum-css-icon-Dash100" />
                     </svg>
                   </span>
-                  <span class="spectrum-Checkbox-label">Tritan (blue/yellow)</span>
+                  <span class="spectrum-Checkbox-label">トリタン型（青/黄）</span>
                 </label>
               </div>
 
@@ -108,7 +108,7 @@
                       <use xlink:href="#spectrum-css-icon-Dash100" />
                     </svg>
                   </span>
-                  <span class="spectrum-Checkbox-label">Achromatopsia</span>
+                  <span class="spectrum-Checkbox-label">全色盲</span>
                 </label>
               </div>
              
@@ -130,10 +130,10 @@
     <div class="spectrum-Content-Tabs">
       <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--quiet">
         <div id="tabContrastingPairs" class="spectrum-Tabs-item a11y-Tabs-item" tabindex="0" onclick="openAccessibilityTab(event, 'contrastPairsWrapper')">
-          <label class="spectrum-Tabs-itemLabel">Contrasting pairs</label>
+          <label class="spectrum-Tabs-itemLabel">コントラストのペア</label>
         </div>
         <div id="tabColorblindSafe" class="spectrum-Tabs-item a11y-Tabs-item" tabindex="0" onclick="openAccessibilityTab(event, 'colorBlindSafeWrapper')">
-          <label class="spectrum-Tabs-itemLabel">Colorblind safe</label>
+          <label class="spectrum-Tabs-itemLabel">色覚特性に配慮</label>
         </div>
       </div>
     </div>
@@ -152,7 +152,7 @@
     </div>
 
     <div id="colorBlindSafeWrapper" class="a11y-Tabs-content">
-      Color blind safe colors
+      色覚特性に配慮した色
     </div>
 
   </main>
