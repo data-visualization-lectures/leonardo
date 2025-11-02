@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "repository": "git@github.com:adobe/leonardo.git",
+  "packageManager": "yarn@1.22.22",
   "author": "Nate Baldwin <nbaldwin@adobe.com>",
   "scripts": {
     "release": "npx lerna publish"
