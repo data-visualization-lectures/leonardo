@@ -48,7 +48,7 @@ gtag('config', 'UA-156021617-1');</script>
   <meta name="theme-color" content="#ffffff">
 
   <link rel="stylesheet" href="https://use.typekit.net/sik3zpp.css">
-<link rel="stylesheet" href="scales.37299130.css"></head>
+<link rel="stylesheet" href="scales.62a98a78.css"></head>
 </head>
 
 <body class="spectrum spectrum--medium appFrame">
@@ -89,13 +89,13 @@ gtag('config', 'UA-156021617-1');</script>
       </div>
 
       <div id="tabSequential" class="spectrum-Tabs-item app-Tabs-item" tabindex="0" onclick="openAppTab(event, 'sequential')">
-        <label class="spectrum-Tabs-itemLabel">Sequential</label>
+        <label class="spectrum-Tabs-itemLabel">連続</label>
       </div>
       <div id="tabDiverging" class="spectrum-Tabs-item app-Tabs-item" tabindex="0" onclick="openAppTab(event, 'diverging')">
-        <label class="spectrum-Tabs-itemLabel">Diverging</label>
+        <label class="spectrum-Tabs-itemLabel">発散</label>
       </div>
       <div id="tabQualitative" class="spectrum-Tabs-item app-Tabs-item" tabindex="0" onclick="openAppTab(event, 'qualitative')">
-        <label class="spectrum-Tabs-itemLabel">Qualitative</label>
+        <label class="spectrum-Tabs-itemLabel">質的</label>
       </div>
 
     </div>
@@ -106,7 +106,7 @@ gtag('config', 'UA-156021617-1');</script>
   <div class="spectrum-AppHeader_item">
     <div class="spectrum-Form spectrum-Form--row">
       <div class="spectrum-Form-item spectrum-Form-item--row">
-        <label for="scales_complianceLevel" class="spectrum-FieldLabel spectrum-FieldLabel--left spectrum-Fieldlabel--sizeM">WCAG level</label>
+        <label for="scales_complianceLevel" class="spectrum-FieldLabel spectrum-FieldLabel--left spectrum-Fieldlabel--sizeM">WCAG レベル</label>
         <select class="spectrum-Picker spectrum-Picker--sizeM spectrum-ActionGroup-item pickerCompliance" name="scales_complianceLevel" id="scales_complianceLevel">
           <option value="AA">AA</option>
           <option value="AAA">AAA</option>
@@ -114,7 +114,7 @@ gtag('config', 'UA-156021617-1');</script>
       </div>
       
       <div class="spectrum-Form-item spectrum-Form-item--row">
-        <label class="spectrum-FieldLabel spectrum-FieldLabel--left spectrum-Fieldlabel--sizeM ">Background color</label>
+        <label class="spectrum-FieldLabel spectrum-FieldLabel--left spectrum-Fieldlabel--sizeM ">背景色</label>
         <input type="color" id="scales_bgColor" class="keyColor-Item keyColor-Item--standalone">
       </div>
       
@@ -126,6 +126,7 @@ gtag('config', 'UA-156021617-1');</script>
 </a>
   </div>
 </header>
+
 
     <!-- Home Tab -->
 <div id="home" class="AppTab appFrameSideNav">
@@ -1195,13 +1196,13 @@ gtag('config', 'UA-156021617-1');</script>
         <div class="spectrum-Panel-Item">
           <div class="spectrum-Panel-Title">
             <h3 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXXS" id="sequential_nameLabel">
-              Scale name 
+              スケール名 
             </h3>
           </div>
           <div class="spectrum-Form">
             <div class="spectrum-Form-item">
               <div class="spectrum-Textfield spectrum-Textfield--sizeM spectrum-Textfield--fullwidth">
-                <input type="text" class="spectrum-Textfield-input" id="sequential_name" name="sequential_name" aria-labelledby="sequential_nameLabel" value="My sequential scale">
+                <input type="text" class="spectrum-Textfield-input" id="sequential_name" name="sequential_name" aria-labelledby="sequential_nameLabel" value="連続スケール">
               </div>
             </div>
           </div>
@@ -1209,9 +1210,9 @@ gtag('config', 'UA-156021617-1');</script>
          <div class="spectrum-Panel-Item">
             <div class="spectrum-Form spectrum-Form--row themeColor_configs" id="sequential-themeColor_configs">
                <div class="themeColor_subheading">
-                  <h4 class="spectrum-Heading spectrum-Heading--sizeXXS">Key colors</h4>
+                  <h4 class="spectrum-Heading spectrum-Heading--sizeXXS">主要色</h4>
                   <div class="keyColorActions">
-                     <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet" id="sequential_addKeyColor" title="Add key color">
+                     <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet" id="sequential_addKeyColor" title="主要色を追加">
                         <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Add">
                            <use xlink:href="#spectrum-icon-18-Add"></use>
                         </svg>
@@ -1225,11 +1226,11 @@ gtag('config', 'UA-156021617-1');</script>
 
          <div class="spectrum-Panel-Item">
           <div class="spectrum-Panel-Title">
-            <h4 class="spectrum-Heading spectrum-Heading--sizeXXS">Interpolation options</h4>
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXXS">補間オプション</h4>
           </div>
           <div class="spectrum-Form spectrum-Form--row" id="sequential-themeColor_keyColors">
                <div class="spectrum-Form-item spectrum-Form-item--row">
-                  <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left">Color space</label>
+                  <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left">色空間</label>
                   <select class="spectrum-Picker spectrum-Picker--sizeM pickerMode" id="sequential_mode" name="sequential_mode">
                      <span class="spectrum-Picker-iconWrapper">
                         <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="spectrum-Picker-icon spectrum-UIIcon-ChevronDownMedium spectrum-Picker-icon">
@@ -1252,7 +1253,7 @@ gtag('config', 'UA-156021617-1');</script>
                   <div class="spectrum-Switch is-disabled" id="sequential_smoothWrapper">
                     <input type="checkbox" class="spectrum-Switch-input" id="sequential_smooth" disabled="">
                     <span class="spectrum-Switch-switch"></span>
-                    <label class="spectrum-Switch-label" for="sequential_smooth">Smooth</label>
+                    <label class="spectrum-Switch-label" for="sequential_smooth">スムージング</label>
                   </div>
                </div>
             </div>
@@ -1264,18 +1265,18 @@ gtag('config', 'UA-156021617-1');</script>
         <div class="spectrum-Panel-Item">
           <div class="spectrum-Panel-Title">
             <h3 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXXS" id="outputFormatHeading">
-              Output
+              出力
             </h3>
           </div>
           <div class="spectrum-Form spectrum-Form--row" style="margin-bottom: var(--spectrum-global-dimension-size-100); margin-top: 0">
             <div class="spectrum-Form-item">
-              <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left" for="sequentialSamples">Quantity</label>
+              <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left" for="sequentialSamples">色数</label>
               <div id="" class="spectrum-Textfield pickerMode">
                 <input class="spectrum-Textfield-input " type="number" min="2" max="100" step="1" value="7" id="sequentialSamples" name="sequentialSamples">
               </div>
             </div>
             <div class="spectrum-Form-item">
-              <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left" for="sequential_format">Format</label>
+              <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left" for="sequential_format">形式</label>
               <select class="spectrum-Picker spectrum-Picker--sizeM pickerOutputFormat pickerMode" id="sequential_format" name="sequential_format">
                 <span class="spectrum-Picker-iconWrapper">
                     <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="spectrum-Picker-icon spectrum-UIIcon-ChevronDownMedium spectrum-Picker-icon">
@@ -1293,7 +1294,7 @@ gtag('config', 'UA-156021617-1');</script>
               <div class="spectrum-Switch" id="sequentialparamStringQuotesWrapper">
                 <input type="checkbox" class="spectrum-Switch-input" id="sequentialparamStringQuotes">
                 <span class="spectrum-Switch-switch"></span>
-                <label class="spectrum-Switch-label" for="sequentialparamStringQuotes">Quotes</label>
+                <label class="spectrum-Switch-label" for="sequentialparamStringQuotes">引用符</label>
               </div>
             </div>
           </div>
@@ -1307,27 +1308,27 @@ gtag('config', 'UA-156021617-1');</script>
         <div class="spectrum-Panel-Item">
           <div class="spectrum-Panel-Title">
             <h3 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXXS">
-              Export 
+              エクスポート 
             </h3>
           </div>
           <div class="spectrum-ActionGroup spectrum-ActionGroup--compact spectrum-Panel-ActionGroup">
-            <button title="Download Tableau xml file" id="sequential_downloadXml" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
+            <button title="Tableau の XML ファイルをダウンロード" id="sequential_downloadXml" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
               <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Download">
                 <use xlink:href="#spectrum-icon-18-Download"></use>
               </svg>
               <span class="spectrum-ActionButton-label">Tableau (XML)</span>
             </button>
-            <button title="Download SVG colors" id="downloadSequentialSwatches" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
+            <button title="SVG 色をダウンロード" id="downloadSequentialSwatches" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
               <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Download">
                 <use xlink:href="#spectrum-icon-18-Download"></use>
               </svg>
-              <span class="spectrum-ActionButton-label">SVG colors</span>
+              <span class="spectrum-ActionButton-label">SVG 色</span>
             </button>  
-            <button title="Download SVG gradient" id="sequential_downloadGradient" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
+            <button title="SVG グラデーションをダウンロード" id="sequential_downloadGradient" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
               <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Download">
                 <use xlink:href="#spectrum-icon-18-Download"></use>
               </svg>
-              <span class="spectrum-ActionButton-label">SVG gradient</span>
+              <span class="spectrum-ActionButton-label">SVG グラデーション</span>
             </button>
           </div>
         </div>
@@ -1337,24 +1338,24 @@ gtag('config', 'UA-156021617-1');</script>
 
   <main id="main_sequential">
     <div class="scaleMainContent-Wrapper">
-      <h2 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXS colorScaleHeaderWrapper">Color scale</h2>
+      <h2 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXS colorScaleHeaderWrapper">カラースケール</h2>
       <div class="themeColor_gradient" id="sequential_gradient">
       </div>
 
       <div id="" class="spectrum-Content-Tabs spectrum-Content-Tabs--noPadding">
         <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--quiet">
           <div id="tabsequentialDemo" class="spectrum-Tabs-item sequential-Tabs-item" tabindex="0" onclick="openScaleTab(event, 'sequentialDemoWrapper', `sequential`)">
-            <label class="spectrum-Tabs-itemLabel">Visualize</label>
+            <label class="spectrum-Tabs-itemLabel">ビジュアライズ</label>
           </div>
           <div id="tabsequentialCharts" class="spectrum-Tabs-item sequential-Tabs-item" tabindex="0" onclick="openScaleTab(event, 'sequentialChartsWrapper', `sequential`)">
-            <label class="spectrum-Tabs-itemLabel">Analyze</label>
+            <label class="spectrum-Tabs-itemLabel">分析</label>
           </div>
         
           <div id="tabsequentialModel" class="spectrum-Tabs-item sequential-Tabs-item" tabindex="0" onclick="openScaleTab(event, 'sequentialModelWrapper', `sequential`)">
-            <label class="spectrum-Tabs-itemLabel">Model</label>
+            <label class="spectrum-Tabs-itemLabel">モデル</label>
           </div>
           <div id="tabsequentialAccessibility" class="spectrum-Tabs-item sequential-Tabs-item" tabindex="0" onclick="openScaleTab(event, 'sequentialAccessibilityWrapper', `sequential`)">
-            <label class="spectrum-Tabs-itemLabel">Accessibility</label>
+            <label class="spectrum-Tabs-itemLabel">アクセシビリティ</label>
           </div>
         </div>
       </div>
@@ -1371,7 +1372,7 @@ gtag('config', 'UA-156021617-1');</script>
         
         <hr class="spectrum-Divider spectrum-Divider--sizeS">
         <p class="spectrum-Body spectrum-Body--sizeS"> 
-          Visualizations from <a class="spectrum-Link" href="https://www.d3-graph-gallery.com/" target="_blank">d3-graph-gallery</a>
+          ビジュアライゼーションは <a class="spectrum-Link" href="https://www.d3-graph-gallery.com/" target="_blank">d3-graph-gallery</a> を使用しています
         </p>
       </div>
 
@@ -1380,7 +1381,7 @@ gtag('config', 'UA-156021617-1');</script>
           <!-- Column 1 -->
           <div class="chartsColumn--left">
             <label for="sequential_chartsMode" class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXXS">
-              Analysis color space
+              分析用色空間
             </label>
             <div class="spectrum-Form-item spectrum-Form-item--row" style="display: inline-flex">
                 <select class="spectrum-Picker spectrum-Picker--sizeM chartsMode" name="sequential_chartsMode" id="sequential_chartsMode">
@@ -1400,7 +1401,7 @@ gtag('config', 'UA-156021617-1');</script>
             </div>
       
             <p class="spectrum-Body spectrum-Body--sizeXS" style="margin-top: var(--spectrum-global-dimension-size-100)">
-              Charts and models will display in the selected color space. 
+              チャートとモデルは選択した色空間で表示されます。 
             </p>
 
             <div id="sequentialColorWheelWrapper" class="tab-ColorWheel">
@@ -1410,20 +1411,20 @@ gtag('config', 'UA-156021617-1');</script>
             </div>
 
             <div class="chart--labelless" id="sequentialRGBchart">
-              RGB chart
+              RGB チャート
             </div>
           </div>
 
           <!-- Column 2 -->
           <div class="chartsColumn--right">
             <div class="chart--labelless" id="sequentialInterpolationChart">
-              chart 1
+              チャート 1
             </div>
             <div class="chart--labelless" id="sequentialInterpolationChart2">
-              chart 2
+              チャート 2
             </div>  
             <div class="chart--labelless" id="sequentialInterpolationChart3">
-              chart 3
+              チャート 3
             </div>   
           </div>
         </div>
@@ -1438,6 +1439,7 @@ gtag('config', 'UA-156021617-1');</script>
       </div>
     </div></main>
 </div>
+
     <!-- Color Scales Tab (partial / dynamic) -->
 <div id="diverging" class="AppTab appFramePanelLeft appFramePanelLeft--large">
   <div class="spectrum-Panel">
@@ -1446,13 +1448,13 @@ gtag('config', 'UA-156021617-1');</script>
         <div class="spectrum-Panel-Item">
           <div class="spectrum-Panel-Title">
             <h3 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXXS" id="diverging_nameLabel">
-              Scale name 
+              スケール名 
             </h3>
           </div>
           <div class="spectrum-Form">
             <div class="spectrum-Form-item">
               <div class="spectrum-Textfield spectrum-Textfield--sizeM spectrum-Textfield--fullwidth">
-                <input type="text" class="spectrum-Textfield-input" id="diverging_name" name="diverging_name" aria-labelledby="diverging_nameLabel" value="My diverging scale">
+                <input type="text" class="spectrum-Textfield-input" id="diverging_name" name="diverging_name" aria-labelledby="diverging_nameLabel" value="発散スケール">
               </div>
             </div>
           </div>
@@ -1460,17 +1462,17 @@ gtag('config', 'UA-156021617-1');</script>
         <div class="spectrum-Panel-Item">
           <div class="spectrum-Panel-Title">
             <h3 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXXS">
-              Key colors 
+              主要色 
             </h3>
           </div>
           <div class="spectrum-Panel-Item spectrum-Panel-Item--subItem">
               <div class="spectrum-Form spectrum-Form--row themeColor_configs themeColor_configs--row" id="diverging-themeColor_configs themeColor_configs--row">
                 <div class="themeColor_subheading">
-                  <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left">Start colors</label>
+                  <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left">開始色</label>
                 </div>
                 <div class="keyColorsWrapper" id="diverging_startKeyColors"></div>
                 <div class="keyColorActions">
-                  <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet" id="diverging_addStartKeyColor" title="Add key color">
+                  <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet" id="diverging_addStartKeyColor" title="主要色を追加">
                     <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Add">
                         <use xlink:href="#spectrum-icon-18-Add"></use>
                     </svg>
@@ -1482,7 +1484,7 @@ gtag('config', 'UA-156021617-1');</script>
           <div class="spectrum-Panel-Item spectrum-Panel-Item--subItem">
               <div class="spectrum-Form spectrum-Form--row themeColor_configs themeColor_configs--row" id="diverging-themeColor_configs themeColor_configs--row">
                 <div class="themeColor_subheading">
-                  <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left">Middle color</label>
+                  <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left">中間色</label>
                 </div>
                 <div class="keyColorsWrapper" id="diverging_middleKeyColors">
                 </div>
@@ -1492,11 +1494,11 @@ gtag('config', 'UA-156021617-1');</script>
           <div class="spectrum-Panel-Item spectrum-Panel-Item--subItem">
             <div class="spectrum-Form spectrum-Form--row themeColor_configs themeColor_configs--row" id="diverging-themeColor_configs themeColor_configs--row">
               <div class="themeColor_subheading">
-                <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left">End colors</label>
+                <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left">終了色</label>
               </div>
               <div class="keyColorsWrapper" id="diverging_endKeyColors"></div>
               <div class="keyColorActions">
-                <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet" id="diverging_addEndKeyColor" title="Add key color">
+                <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet" id="diverging_addEndKeyColor" title="主要色を追加">
                   <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Add">
                       <use xlink:href="#spectrum-icon-18-Add"></use>
                   </svg>
@@ -1508,10 +1510,10 @@ gtag('config', 'UA-156021617-1');</script>
 
 
          <div class="spectrum-Panel-Item">
-          <span class="spectrum-Heading spectrum-Heading--sizeXXS spectrum-Panel-Item-Title">Interpolation options</span>
+          <span class="spectrum-Heading spectrum-Heading--sizeXXS spectrum-Panel-Item-Title">補間オプション</span>
           <div class="spectrum-Form spectrum-Form--row" id="diverging-themeColor_keyColors">
                <div class="spectrum-Form-item spectrum-Form-item--row">
-                  <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left">Color space</label>
+                  <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left">色空間</label>
                   <select class="spectrum-Picker spectrum-Picker--sizeM pickerMode" id="diverging_mode" name="diverging_mode">
                      <span class="spectrum-Picker-iconWrapper">
                         <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="spectrum-Picker-icon spectrum-UIIcon-ChevronDownMedium spectrum-Picker-icon">
@@ -1534,7 +1536,7 @@ gtag('config', 'UA-156021617-1');</script>
                   <div class="spectrum-Switch" id="diverging_smoothWrapper">
                     <input type="checkbox" class="spectrum-Switch-input" id="diverging_smooth">
                     <span class="spectrum-Switch-switch"></span>
-                    <label class="spectrum-Switch-label" for="diverging_smooth">Smooth</label>
+                    <label class="spectrum-Switch-label" for="diverging_smooth">スムージング</label>
                   </div>
                </div>
             </div>
@@ -1545,18 +1547,18 @@ gtag('config', 'UA-156021617-1');</script>
         <div class="spectrum-Panel-Item">
           <div class="spectrum-Panel-Title">
             <h3 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXXS" id="outputFormatHeading">
-              Output
+              出力
             </h3>
           </div>
           <div class="spectrum-Form spectrum-Form--row" style="margin-bottom: var(--spectrum-global-dimension-size-100); margin-top: 0">
             <div class="spectrum-Form-item">
-              <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left" for="divergingSamples">Quantity</label>
+              <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left" for="divergingSamples">色数</label>
               <div id="" class="spectrum-Textfield pickerMode">
                 <input class="spectrum-Textfield-input " type="number" min="3" max="101" step="2" value="7" id="divergingSamples" name="divergingSamples">
               </div>
             </div>
             <div class="spectrum-Form-item">
-              <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left" for="diverging_format">Format</label>
+              <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left" for="diverging_format">形式</label>
               <select class="spectrum-Picker spectrum-Picker--sizeM pickerOutputFormat pickerMode" id="diverging_format" name="diverging_format">
                 <span class="spectrum-Picker-iconWrapper">
                     <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="spectrum-Picker-icon spectrum-UIIcon-ChevronDownMedium spectrum-Picker-icon">
@@ -1574,7 +1576,7 @@ gtag('config', 'UA-156021617-1');</script>
               <div class="spectrum-Switch" id="divergingparamStringQuotesWrapper">
                 <input type="checkbox" class="spectrum-Switch-input" id="divergingparamStringQuotes">
                 <span class="spectrum-Switch-switch"></span>
-                <label class="spectrum-Switch-label" for="divergingparamStringQuotes">Quotes</label>
+                <label class="spectrum-Switch-label" for="divergingparamStringQuotes">引用符</label>
               </div>
             </div>
           </div>
@@ -1588,27 +1590,27 @@ gtag('config', 'UA-156021617-1');</script>
         <div class="spectrum-Panel-Item">
           <div class="spectrum-Panel-Title">
             <h3 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXXS">
-              Export 
+              エクスポート 
             </h3>
           </div>
           <div class="spectrum-ActionGroup spectrum-ActionGroup--compact spectrum-Panel-ActionGroup">
-            <button title="Download Tableau xml file" id="diverging_downloadXml" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
+            <button title="Tableau の XML ファイルをダウンロード" id="diverging_downloadXml" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
               <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Download">
                 <use xlink:href="#spectrum-icon-18-Download"></use>
               </svg>
               <span class="spectrum-ActionButton-label">Tableau (XML)</span>
             </button>
-            <button title="Download SVG colors" id="downloadDivergingSwatches" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
+            <button title="SVG 色をダウンロード" id="downloadDivergingSwatches" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
               <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Download">
                 <use xlink:href="#spectrum-icon-18-Download"></use>
               </svg>
-              <span class="spectrum-ActionButton-label">SVG colors</span>
+              <span class="spectrum-ActionButton-label">SVG 色</span>
             </button>  
-            <button title="Download SVG gradient" id="diverging_downloadGradient" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
+            <button title="SVG グラデーションをダウンロード" id="diverging_downloadGradient" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
               <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Download">
                 <use xlink:href="#spectrum-icon-18-Download"></use>
               </svg>
-              <span class="spectrum-ActionButton-label">SVG gradient</span>
+              <span class="spectrum-ActionButton-label">SVG グラデーション</span>
             </button>
           </div>
         </div>
@@ -1619,23 +1621,23 @@ gtag('config', 'UA-156021617-1');</script>
 
   <main id="main_diverging">
     <div class="scaleMainContent-Wrapper">
-      <h2 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXS colorScaleHeaderWrapper">Color scale</h2>
+      <h2 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXS colorScaleHeaderWrapper">カラースケール</h2>
       <div class="themeColor_gradient" id="diverging_gradient">
       </div>
 
       <div id="" class="spectrum-Content-Tabs spectrum-Content-Tabs--noPadding">
         <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--quiet">
           <div id="tabdivergingDemo" class="spectrum-Tabs-item diverging-Tabs-item" tabindex="0" onclick="openScaleTab(event, 'divergingDemoWrapper', `diverging`)">
-            <label class="spectrum-Tabs-itemLabel">Visualize</label>
+            <label class="spectrum-Tabs-itemLabel">ビジュアライズ</label>
           </div>
           <div id="tabdivergingCharts" class="spectrum-Tabs-item diverging-Tabs-item" tabindex="0" onclick="openScaleTab(event, 'divergingChartsWrapper', `diverging`)">
-            <label class="spectrum-Tabs-itemLabel">Analyze</label>
+            <label class="spectrum-Tabs-itemLabel">分析</label>
           </div>
           <div id="tabdivergingModel" class="spectrum-Tabs-item diverging-Tabs-item" tabindex="0" onclick="openScaleTab(event, 'divergingModelWrapper', `diverging`)">
-            <label class="spectrum-Tabs-itemLabel">Model</label>
+            <label class="spectrum-Tabs-itemLabel">モデル</label>
           </div>
           <div id="tabdivergingOutput" class="spectrum-Tabs-item diverging-Tabs-item" tabindex="0" onclick="openScaleTab(event, 'divergingAccessibilityWrapper', `diverging`)">
-            <label class="spectrum-Tabs-itemLabel">Accessibility</label>
+            <label class="spectrum-Tabs-itemLabel">アクセシビリティ</label>
           </div>
         </div>
       </div>
@@ -1652,7 +1654,7 @@ gtag('config', 'UA-156021617-1');</script>
         
         <hr class="spectrum-Divider spectrum-Divider--sizeS">
         <p class="spectrum-Body spectrum-Body--sizeS"> 
-          Visualizations from <a class="spectrum-Link" href="https://www.d3-graph-gallery.com/" target="_blank">d3-graph-gallery</a>
+          ビジュアライゼーションは <a class="spectrum-Link" href="https://www.d3-graph-gallery.com/" target="_blank">d3-graph-gallery</a> を使用しています
         </p>
       </div>
 
@@ -1661,7 +1663,7 @@ gtag('config', 'UA-156021617-1');</script>
           <!-- Column 1 -->
           <div class="chartsColumn--left">
             <label for="diverging_chartsMode" class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXXS">
-              Analysis color space
+              分析用色空間
             </label>
             <div class="spectrum-Form-item spectrum-Form-item--row" style="display: inline-flex">
                 <select class="spectrum-Picker spectrum-Picker--sizeM chartsMode" name="diverging_chartsMode" id="diverging_chartsMode">
@@ -1681,7 +1683,7 @@ gtag('config', 'UA-156021617-1');</script>
             </div>
       
             <p class="spectrum-Body spectrum-Body--sizeXS" style="margin-top: var(--spectrum-global-dimension-size-100)">
-              Charts and models will display in the selected color space. 
+              チャートとモデルは選択した色空間で表示されます。 
             </p>
 
             <div id="divergingColorWheelWrapper" class="tab-ColorWheel">
@@ -1691,20 +1693,20 @@ gtag('config', 'UA-156021617-1');</script>
             </div>
 
             <div class="chart--labelless" id="divergingRGBchart">
-              RGB chart
+              RGB チャート
             </div>
           </div>
 
           <!-- Column 2 -->
           <div class="chartsColumn--right">
             <div class="chart--labelless" id="divergingInterpolationChart">
-              chart 1
+              チャート 1
             </div>
             <div class="chart--labelless" id="divergingInterpolationChart2">
-              chart 2
+              チャート 2
             </div>  
             <div class="chart--labelless" id="divergingInterpolationChart3">
-              chart 3
+              チャート 3
             </div>   
           </div>
         </div>
@@ -1721,6 +1723,7 @@ gtag('config', 'UA-156021617-1');</script>
       </div>
     </main>
 </div>
+
     <!-- Color Scales Tab (partial / dynamic) -->
 <div id="qualitative" class="AppTab appFramePanelLeft appFramePanelLeft--large">
   <div class="spectrum-Panel">
@@ -1729,32 +1732,32 @@ gtag('config', 'UA-156021617-1');</script>
         <div class="spectrum-Panel-Item">
           <div class="spectrum-Panel-Title">
             <h3 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXXS" id="qualitative_nameLabel">
-              Scale name 
+              スケール名 
             </h3>
           </div>
           <div class="spectrum-Form">
             <div class="spectrum-Form-item">
               <div class="spectrum-Textfield spectrum-Textfield--sizeM spectrum-Textfield--fullwidth">
-                <input type="text" class="spectrum-Textfield-input" id="qualitative_name" name="qualitative_name" aria-labelledby="qualitative_nameLabel" value="My qualitative scale">
+                <input type="text" class="spectrum-Textfield-input" id="qualitative_name" name="qualitative_name" aria-labelledby="qualitative_nameLabel" value="質的スケール">
               </div>
             </div>
           </div>
         </div>
          <div class="spectrum-Panel-Item">
-            <span class="spectrum-Heading spectrum-Heading--sizeXXS spectrum-Panel-Item-Title">Source colors</span>
+            <span class="spectrum-Heading spectrum-Heading--sizeXXS spectrum-Panel-Item-Title">元の色</span>
             <div class="spectrum-Textfield spectrum-Textfield--multiline" id="qualitative_sampleColors-Wrapper">
-              <textarea placeholder="Enter colors" name="qualitative_sampleColors" class="spectrum-Textfield-input" id="qualitative_sampleColors"></textarea>
+              <textarea placeholder="色を入力" name="qualitative_sampleColors" class="spectrum-Textfield-input" id="qualitative_sampleColors"></textarea>
             </div>
             <div id="originalColors"></div>
          </div>
 
          <div class="spectrum-Panel-Item">
-          <span class="spectrum-Heading spectrum-Heading--sizeXXS spectrum-Panel-Item-Title">Constraints</span>
+          <span class="spectrum-Heading spectrum-Heading--sizeXXS spectrum-Panel-Item-Title">制約</span>
           <div class="spectrum-Form spectrum-Form--row">
             <div class="spectrum-Form-item">
               <div id="" class="spectrum-Slider">
                 <div class="spectrum-Slider-labelContainer">
-                  <label class="spectrum-Slider-label" id="qualitative_ThresholdLabel" for="qualitative_Threshold">Color difference (min DeltaE)</label>
+                  <label class="spectrum-Slider-label" id="qualitative_ThresholdLabel" for="qualitative_Threshold">色差（最小 ΔE）</label>
                   <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="qualitative_ThresholdLabel" id="qualitative_ThresholdValue">11</div>
                 </div>
                 <input class="spectrum-Slider-controls" type="range" min="11" max="50" step="1" value="11" id="qualitative_Threshold" name="qualitative_Threshold">
@@ -1765,7 +1768,7 @@ gtag('config', 'UA-156021617-1');</script>
               <div class="spectrum-Switch">
                 <input type="checkbox" class="spectrum-Switch-input" id="qualitative_minContrast">
                 <span class="spectrum-Switch-switch"></span>
-                <label class="spectrum-Switch-label" for="qualitative_minContrast">WCAG compliant</label>
+                <label class="spectrum-Switch-label" for="qualitative_minContrast">WCAG 適合</label>
               </div>
             </div>
 
@@ -1773,7 +1776,7 @@ gtag('config', 'UA-156021617-1');</script>
          </div>
 
          <div class="spectrum-Panel-Item">
-            <span class="spectrum-Heading spectrum-Heading--sizeXXS spectrum-Panel-Item-Title">Color vision deficiencies to support</span>
+            <span class="spectrum-Heading spectrum-Heading--sizeXXS spectrum-Panel-Item-Title">サポートする色覚特性</span>
             <div class="spectrum-Form spectrum-Form--row">
               <div class="spectrum-Form-item">
                 <label class="spectrum-Checkbox spectrum-Checkbox--sizeM">
@@ -1786,7 +1789,7 @@ gtag('config', 'UA-156021617-1');</script>
                       <use xlink:href="#spectrum-css-icon-Dash100"></use>
                     </svg>
                   </span>
-                  <span class="spectrum-Checkbox-label">Protan (red/green)</span>
+                  <span class="spectrum-Checkbox-label">プロタン型（赤/緑）</span>
                 </label>
               </div>
               <div class="spectrum-Form-item">
@@ -1800,7 +1803,7 @@ gtag('config', 'UA-156021617-1');</script>
                       <use xlink:href="#spectrum-css-icon-Dash100"></use>
                     </svg>
                   </span>
-                  <span class="spectrum-Checkbox-label">Deutan (red/green)</span>
+                  <span class="spectrum-Checkbox-label">デューテラン型（赤/緑）</span>
                 </label>
               </div>
             </div>
@@ -1844,15 +1847,15 @@ gtag('config', 'UA-156021617-1');</script>
         <div class="spectrum-Panel-Item spectrum-Panel-Item--noPadding">
           <div class="spectrum-Panel-Item">
             <div class="spectrum-Panel-Title">
-              <h3 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXXS" id="outputFormatHeading">
-                Output
-              </h3>
+            <h3 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXXS" id="outputFormatHeading">
+              出力
+            </h3>
 
             </div>
             
             <div class="spectrum-Form spectrum-Form--row" style="margin-bottom: var(--spectrum-global-dimension-size-100); margin-top: 0">
               <div class="spectrum-Form-item">
-                <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left" for="qualitative_format">Format</label>
+                <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left" for="qualitative_format">形式</label>
                 <select class="spectrum-Picker spectrum-Picker--sizeM pickerOutputFormat pickerMode" id="qualitative_format" name="qualitative_format">
                   <span class="spectrum-Picker-iconWrapper">
                       <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="spectrum-Picker-icon spectrum-UIIcon-ChevronDownMedium spectrum-Picker-icon">
@@ -1870,13 +1873,13 @@ gtag('config', 'UA-156021617-1');</script>
                 <div class="spectrum-Switch" id="qualitativeparamStringQuotesWrapper">
                   <input type="checkbox" class="spectrum-Switch-input" id="qualitativeparamStringQuotes">
                   <span class="spectrum-Switch-switch"></span>
-                  <label class="spectrum-Switch-label" for="qualitativeparamStringQuotes">Quotes</label>
+                <label class="spectrum-Switch-label" for="qualitativeparamStringQuotes">引用符</label>
                 </div>
               </div>
             </div>
 
             <div id="qualitative_selectedColors" class="sampleSwatches isEmpty">
-              Select generated colors to begin building your scale
+              生成された色を選択してスケール作成を開始してください
             </div>
 
             <div class="themeOutputParams" id="qualitativeColorScaleOutput"></div>
@@ -1886,22 +1889,22 @@ gtag('config', 'UA-156021617-1');</script>
           <div class="spectrum-Panel-Item">
             <div class="spectrum-Panel-Title">
               <h3 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXXS" id="outputFormatHeading">
-                Export
+                エクスポート
               </h3>
               </div>
 
             <div class="spectrum-ActionGroup spectrum-ActionGroup--compact spectrum-Panel-ActionGroup">
-              <button title="Download Tableau xml file" id="qualitative_downloadXml" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
+              <button title="Tableau の XML ファイルをダウンロード" id="qualitative_downloadXml" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
                 <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Download">
                   <use xlink:href="#spectrum-icon-18-Download"></use>
                 </svg>
                 <span class="spectrum-ActionButton-label">Tableau (XML)</span>
               </button>
-              <button title="Download SVG colors" id="downloadQualitativeSwatches" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
+              <button title="SVG 色をダウンロード" id="downloadQualitativeSwatches" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
                 <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Download">
                   <use xlink:href="#spectrum-icon-18-Download"></use>
                 </svg>
-                <span class="spectrum-ActionButton-label">SVG colors</span>
+                <span class="spectrum-ActionButton-label">SVG 色</span>
               </button>  
             </div>
 
@@ -1913,12 +1916,12 @@ gtag('config', 'UA-156021617-1');</script>
   <main id="main_qualitative">
     <div class="scaleMainContent-Wrapper">
       <div class="colorScaleHeaderWrapper">
-        <h3 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXS">Generated color samples</h3>
-        <button class="spectrum-Button spectrum-Button--cta spectrum-Button--sizeM" id="qualitative_Generate" title="Generate new color options">
+        <h3 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXS">生成されたカラ―サンプル</h3>
+        <button class="spectrum-Button spectrum-Button--cta spectrum-Button--sizeM" id="qualitative_Generate" title="安全なカラーパレットを切り替え">
           <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Generate">
             <use xlink:href="#spectrum-icon-18-Refresh"></use>
           </svg>
-          <span class="spectrum-Button-label">Cycle safe color options</span>
+          <span class="spectrum-Button-label">安全なカラーパレットを切り替え</span>
         </button>        
       </div>
       <div class="" id="qualitative_generatedColors">
@@ -1928,13 +1931,13 @@ gtag('config', 'UA-156021617-1');</script>
       <div id="" class="spectrum-Content-Tabs spectrum-Content-Tabs--noPadding">
         <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--quiet">
           <div id="tabqualitativeDemo" class="spectrum-Tabs-item qualitative-Tabs-item" tabindex="0" onclick="openScaleTab(event, 'qualitativeDemoWrapper', `qualitative`)">
-            <label class="spectrum-Tabs-itemLabel">Visualize</label>
+            <label class="spectrum-Tabs-itemLabel">ビジュアライズ</label>
           </div>
           <div id="tabqualitativeSimulation" class="spectrum-Tabs-item qualitative-Tabs-item" tabindex="0" onclick="openScaleTab(event, 'qualitativeSimulationWrapper', `qualitative`)">
-            <label class="spectrum-Tabs-itemLabel">Simulations</label>
+            <label class="spectrum-Tabs-itemLabel">シミュレーション</label>
           </div>
           <div id="tabqualitativeCharts" class="spectrum-Tabs-item qualitative-Tabs-item" tabindex="0" onclick="openScaleTab(event, 'qualitativeChartsWrapper', `qualitative`)">
-            <label class="spectrum-Tabs-itemLabel">Analyze</label>
+            <label class="spectrum-Tabs-itemLabel">分析</label>
           </div>
         </div>
 
@@ -1958,7 +1961,7 @@ gtag('config', 'UA-156021617-1');</script>
         
         <hr class="spectrum-Divider spectrum-Divider--sizeS">
         <p class="spectrum-Body spectrum-Body--sizeS"> 
-          Visualizations from <a class="spectrum-Link" href="https://www.d3-graph-gallery.com/" target="_blank">d3-graph-gallery</a>
+          ビジュアライゼーションは <a class="spectrum-Link" href="https://www.d3-graph-gallery.com/" target="_blank">d3-graph-gallery</a> を使用しています
         </p>
       </div>
 
@@ -1967,7 +1970,7 @@ gtag('config', 'UA-156021617-1');</script>
           <!-- Column 1 -->
           <div class="chartsColumn--left">
             <label for="qualitative_chartsMode" class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXXS">
-              Analysis color space
+              分析用色空間
             </label>
             <div class="spectrum-Form-item spectrum-Form-item--row" style="display: inline-flex">
                 <select class="spectrum-Picker spectrum-Picker--sizeM chartsMode" name="qualitative_chartsMode" id="qualitative_chartsMode">
@@ -1987,7 +1990,7 @@ gtag('config', 'UA-156021617-1');</script>
             </div>
       
             <p class="spectrum-Body spectrum-Body--sizeXS" style="margin-top: var(--spectrum-global-dimension-size-100)">
-              Charts and models will display in the selected color space. 
+              チャートとモデルは選択した色空間で表示されます。 
             </p>
 
             <div id="qualitativeColorWheelWrapper" class="tab-ColorWheel">
@@ -2006,27 +2009,28 @@ gtag('config', 'UA-156021617-1');</script>
       </div>
     </main>
 </div>
+
     <div class="addBulkColorDialog spectrum-Dialog spectrum-Dialog--small spectrum-Dialog--confirmation" id="">
   <div class="spectrum-Dialog-grid">
-    <h2 class="spectrum-Dialog-heading">Add bulk key colors to <span id="addBulkDialog_ScaleName">color scale</span></h2>
+    <h2 class="spectrum-Dialog-heading">複数の主要色を <span id="addBulkDialog_ScaleName">カラースケール</span> に追加</h2>
     <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
     <section class="spectrum-Dialog-content">
       <span class="spectrum-Typography">
-        <p class="spectrum-Body4">Enter hex colors separated by comma or new line.</p>
-        <p class="spectrum-Body4">These will be added as <b>key colors<b> to this color scale. </b></b></p>
+        <p class="spectrum-Body4">16 進カラーコードをカンマまたは改行で区切って入力してください。</p>
+        <p class="spectrum-Body4">入力した色はこのカラースケールの<b>主要色</b>として追加されます。</p>
       </span>
       <div class="spectrum-Form spectrum-Form--labelsAbove">
         <div class="spectrum-Form-item">
-          <label for="fieldLabelExample-lifestory" class="spectrum-Form-itemLabel">Colors (Hex)</label>
+          <label for="fieldLabelExample-lifestory" class="spectrum-Form-itemLabel">色（HEX）</label>
           <div class="spectrum-Textfield spectrum-Textfield--multiline" style="width:100%;">
-            <textarea id="bulkColors" class="spectrum-Textfield-input" placeholder="Enter colors here"></textarea>
+            <textarea id="bulkColors" class="spectrum-Textfield-input" placeholder="ここに色を入力"></textarea>
           </div>
         </div>
       </div>
     </section>
     <div class="spectrum-ButtonGroup spectrum-Dialog-buttonGroup spectrum-Dialog-buttonGroup--noFooter">
-      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary spectrum-ButtonGroup-item" onclick="cancelBulk()">Cancel</button>
-      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--cta spectrum-ButtonGroup-item" id="bulkAddButton">Add</button>
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary spectrum-ButtonGroup-item" onclick="cancelBulk()">キャンセル</button>
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--cta spectrum-ButtonGroup-item" id="bulkAddButton">追加</button>
 
     </div>
   </div>
@@ -2036,6 +2040,6 @@ gtag('config', 'UA-156021617-1');</script>
 
   </div>
 
-<script src="scales.2cf524e0.js"></script>
+<script src="scales.78329ff8.js"></script>
 
 </body></html>
