@@ -48,7 +48,7 @@ gtag('config', 'UA-156021617-1');</script>
   <meta name="theme-color" content="#ffffff">
 
   <link rel="stylesheet" href="https://use.typekit.net/sik3zpp.css">
-<link rel="stylesheet" href="theme.653414b9.css"></head>
+<link rel="stylesheet" href="theme.0334b7ad.css"></head>
 </head>
 <body class="spectrum spectrum--medium appFrame">
   <div id="pageLoader">
@@ -88,7 +88,7 @@ gtag('config', 'UA-156021617-1');</script>
       </div>
 
       <div role="tab" aria-controls="palette" id="tabPalette" class="spectrum-Tabs-item app-Tabs-item" tabindex="0" onclick="openAppTab(event, 'palette')">
-        <label class="spectrum-Tabs-itemLabel">Create</label>
+        <label class="spectrum-Tabs-itemLabel">作成</label>
       </div>
 <!-- 
       <div role="tab" aria-controls="palette" id="tabPalette" class="spectrum-Tabs-item app-Tabs-item" tabindex="0" onclick="openAppTab(event, 'a11yTab')">
@@ -96,7 +96,7 @@ gtag('config', 'UA-156021617-1');</script>
       </div> -->
 
       <div role="tab" aria-controls="codeTab" id="tabTheme" class="spectrum-Tabs-item app-Tabs-item" tabindex="0" onclick="openAppTab(event, 'codeTab')">
-        <label class="spectrum-Tabs-itemLabel">Use</label>
+        <label class="spectrum-Tabs-itemLabel">利用</label>
       </div>
 
     </div>
@@ -106,7 +106,7 @@ gtag('config', 'UA-156021617-1');</script>
 
     <div class="spectrum-Form-item">
       <div class="spectrum-Textfield spectrum-Textfield--custom" id="themeNameTextfield">
-        <input type="text" class="spectrum-Textfield-input" id="themeNameInput" value="Untitled">
+        <input type="text" class="spectrum-Textfield-input" id="themeNameInput" value="名称未設定">
       </div>
     </div>
   </div>
@@ -114,13 +114,13 @@ gtag('config', 'UA-156021617-1');</script>
   <div class="spectrum-AppHeader_item spectrum-AppHeader_item--last">
 
     <div class="spectrum-ActionGroup">
-      <button id="buttonAnalysisColorSpace" title="Analysis color space" class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-ActionButton--sizeM spectrum-ActionGroup-item spectrum-Popover-trigger">
+      <button id="buttonAnalysisColorSpace" title="分析用色空間" class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-ActionButton--sizeM spectrum-ActionGroup-item spectrum-Popover-trigger">
         <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Edit">
           <use xlink:href="#spectrum-icon-18-Beaker"></use>
         </svg>
         <!-- <span class="spectrum-ActionButton-label">Analyze</span> -->
       </button>
-      <button id="buttonAdaptiveControls" title="Theme settings" class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-ActionButton--sizeM spectrum-ActionGroup-item spectrum-Popover-trigger">
+      <button id="buttonAdaptiveControls" title="テーマ設定" class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-ActionButton--sizeM spectrum-ActionGroup-item spectrum-Popover-trigger">
         <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Copy">
           <use xlink:href="#spectrum-icon-18-Properties"></use>
         </svg>
@@ -131,7 +131,7 @@ gtag('config', 'UA-156021617-1');</script>
         <!-- <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Copy">
           <use xlink:href="#spectrum-icon-18-Share" />
         </svg> -->
-        <span class="spectrum-Button-label">Share</span>
+        <span class="spectrum-Button-label">共有</span>
       </button>
 
       <div id="popoverShareOptions" class="spectrum-Popover spectrum-Popover--paddedSmall">
@@ -141,31 +141,31 @@ gtag('config', 'UA-156021617-1');</script>
               <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Edit">
                 <use xlink:href="#spectrum-icon-18-Link"></use>
               </svg>
-              <span class="spectrum-ActionButton-label">Copy theme URL</span>
+              <span class="spectrum-ActionButton-label">テーマURLをコピー</span>
             </button> 
             <button id="downloadThemeColorsSvg" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
               <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Download">
                 <use xlink:href="#spectrum-icon-18-Download"></use>
               </svg>
-              <span class="spectrum-ActionButton-label">Download SVG UI kit</span>
+              <span class="spectrum-ActionButton-label">SVG UIキットをダウンロード</span>
             </button>  
             <button id="copyThemeColors" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet copyButton">
               <svg class="spectrum-Icon spectrum-Icon--sizeM" focusable="false" aria-hidden="true" aria-label="Copy">
                 <use xlink:href="#spectrum-icon-18-Copy"></use>
               </svg>
-              <span class="spectrum-ActionButton-label">Copy color values</span>
+              <span class="spectrum-ActionButton-label">色の値をコピー</span>
             </button>
           </div>
         </div>
         <div class="spectrum-Form-item spectrum-Form-item--row">
-          <button id="closeShareOptions" class="spectrum-Button spectrum-Button--sizeM spectrum-Button--primary">Close</button>
+          <button id="closeShareOptions" class="spectrum-Button spectrum-Button--sizeM spectrum-Button--primary">閉じる</button>
         </div>
       </div>
 
       <div id="popoverAnalysisColorSpace" class="spectrum-Popover spectrum-Popover--padded">
         <div class="spectrum-Panel-Title">
-          <h3 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXXS">
-            Analysis color space
+          <h3 class="spectrum-TypTypography spectrum-Heading spectrum-Heading--sizeXXS">
+            分析用色空間
           </h3>
         </div>
         <div class="spectrum-Form spectrum-Form--spaced">
@@ -185,24 +185,24 @@ gtag('config', 'UA-156021617-1');</script>
               </svg>
             </select>
           </div>
-          <p class="spectrum-Body spectrum-Body--sizeXS">Charts and models will display in the selected color space. A <a href="https://en.wikipedia.org/wiki/List_of_color_spaces_and_their_uses#Uniform_color_spaces" target="_blank">uniform color space</a> is recommended.</p>
+          <p class="spectrum-Body spectrum-Body--sizeXS">チャートとモデルは選択した色空間で表示されます。<a href="https://en.wikipedia.org/wiki/List_of_color_spaces_and_their_uses#Uniform_color_spaces" target="_blank">均等色空間</a>の利用を推奨します。</p>
 
           <div class="spectrum-Form-item spectrum-Form-item--row">
-            <button id="closeAnalysisColorSpace" class="spectrum-Button spectrum-Button--sizeM spectrum-Button--primary">Close</button>
+            <button id="closeAnalysisColorSpace" class="spectrum-Button spectrum-Button--sizeM spectrum-Button--primary">閉じる</button>
           </div>
         </div>
       </div>
 
       <div id="popoverAdaptiveControls" class="spectrum-Popover spectrum-Popover--padded">
         <div class="spectrum-Panel-Title">
-          <h3 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXXS">
-            Theme settings
+          <h3 class="spectrum-TypTypography spectrum-Heading spectrum-Heading--sizeXXS">
+            テーマ設定
           </h3>
         </div>
         <!-- <p class="spectrum-Body spectrum-Body--sizeXS">Modify your entire theme without compromising color relationships. Try making a <b>dark mode</b> theme.</p> -->
         <div class="spectrum-Form spectrum-Form--row">
           <div class="spectrum-Form-item">
-            <label id="themeBaseLabel" for="themeBase" class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left is-disabled">Background color</label>
+            <label id="themeBaseLabel" for="themeBase" class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left is-disabled">背景色</label>
             <select class="spectrum-Picker is-disabled" name="themeBase" id="themeBase" disabled="">
               <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="spectrum-Picker-icon spectrum-UIIcon-ChevronDownMedium spectrum-Picker-icon">
                 <use xlink:href="#spectrum-css-icon-ChevronDownMedium"></use>
@@ -210,12 +210,12 @@ gtag('config', 'UA-156021617-1');</script>
             </select>
           </div>
           <div class="spectrum-Form-item">
-            <label id="themeWCAGlabel" for="themeWCAG" class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left">Contrast formula</label>
+            <label id="themeWCAGlabel" for="themeWCAG" class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left">コントラスト計算式</label>
             <select class="spectrum-Picker" name="themeWCAG" id="themeWCAG">
               <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="spectrum-Picker-icon spectrum-UIIcon-ChevronDownMedium spectrum-Picker-icon">
                 <use xlink:href="#spectrum-css-icon-ChevronDownMedium"></use>
               </svg>
-              <option value="wcag2">Relative Luminance</option>
+              <option value="wcag2">相対輝度</option>
               <option value="wcag3">APCA</option>
             </select>
           </div>
@@ -224,28 +224,28 @@ gtag('config', 'UA-156021617-1');</script>
           <div class="spectrum-Form-item">
             <div id="brightnessSliderWrapper" class="spectrum-Slider is-disabled themeSettingsSlider">
               <div class="spectrum-Slider-labelContainer">
-                <label class="spectrum-Slider-label" id="themeBrightnessLabel" for="themeBrightnessSlider">Lightness</label>
+                <label class="spectrum-Slider-label" id="themeBrightnessLabel" for="themeBrightnessSlider">明度</label>
                 <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="themeBrightnessLabel" id="themeBrightnessValue">100%</div>
               </div>
               <input class="spectrum-Slider-controls" type="range" min="0" max="100" value="100" id="themeBrightnessSlider" name="themeBrightnessSlider" disabled="">
             </div>
             <div id="contrastSliderWrapper" class="spectrum-Slider is-disabled themeSettingsSlider">
               <div class="spectrum-Slider-labelContainer">
-                <label class="spectrum-Slider-label" id="themeContrastLabel" for="themeContrastSlider">Contrast</label>
+                <label class="spectrum-Slider-label" id="themeContrastLabel" for="themeContrastSlider">コントラスト</label>
                 <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="themeContrastLabel" id="themeContrastValue">100%</div>
               </div>
               <input class="spectrum-Slider-controls" type="range" min="0.25" max="5" value="1" step="0.01" id="themeContrastSlider" name="themeContrastSlider" disabled="">
             </div>
             <div id="saturationSliderWrapper" class="spectrum-Slider is-disabled themeSettingsSlider">
               <div class="spectrum-Slider-labelContainer">
-                <label class="spectrum-Slider-label" id="themeSaturationLabel" for="themeSaturationSlider">Saturation</label>
+                <label class="spectrum-Slider-label" id="themeSaturationLabel" for="themeSaturationSlider">彩度</label>
                 <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="themeSaturationLabel" id="themeSaturationValue">100%</div>
               </div>
               <input class="spectrum-Slider-controls" type="range" min="0" max="100" value="100" step="1" id="themeSaturationSlider" name="themeSaturationSlider" disabled="">
             </div>
           </div>
           <div class="spectrum-Form-item spectrum-Form-item--row">
-            <button id="closeAdaptiveControls" class="spectrum-Button spectrum-Button--sizeM spectrum-Button--primary">Close</button>
+            <button id="closeAdaptiveControls" class="spectrum-Button spectrum-Button--sizeM spectrum-Button--primary">閉じる</button>
           </div>
         </div>
       </div>
@@ -258,6 +258,7 @@ gtag('config', 'UA-156021617-1');</script>
 </a>
   </div>
 </header>
+
 
     <!-- Home Tab -->
 <div id="home" class="AppTab appFrameSideNav">
@@ -1325,10 +1326,10 @@ gtag('config', 'UA-156021617-1');</script>
       <div class="spectrum-Panel-Tabs">
         <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--quiet">
           <div id="tabPanelColorScales" class="spectrum-Tabs-item panel-Tabs-item" tabindex="0" onclick="openPanelTab(event, 'colorScales')">
-            <label class="spectrum-Tabs-itemLabel">Color scales</label>
+            <label class="spectrum-Tabs-itemLabel">カラースケール</label>
           </div>
           <div id="tabPanelContrastSwatches" class="spectrum-Tabs-item panel-Tabs-item" tabindex="0" onclick="openPanelTab(event, 'contrastSwatches')">
-            <label class="spectrum-Tabs-itemLabel">Lightness stops</label>
+            <label class="spectrum-Tabs-itemLabel">明度ステップ</label>
           </div>
         </div>
       </div>
@@ -1339,20 +1340,20 @@ gtag('config', 'UA-156021617-1');</script>
               <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Add Color">
                 <use xlink:href="#spectrum-icon-18-Add"></use>
               </svg>
-              <span class="spectrum-ActionButton-label">Add color</span>
+              <span class="spectrum-ActionButton-label">カラーを追加</span>
             </button>
             <label tabindex="0" id="image-upload-button" for="image-upload" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
               <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Add Color">
                 <use xlink:href="#spectrum-icon-18-Image"></use>
               </svg>
-              <span class="spectrum-ActionButton-label">Extract from image</span>
+              <span class="spectrum-ActionButton-label">画像から抽出</span>
             </label>
             <input id="image-upload" type="file" style="display:none;" onInput="addColorsFromImage()">
-            <button title="Sort ratios ascending" id="sort" onclick="sortColorScales()" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
+            <button title="比率を昇順で並べ替え" id="sort" onclick="sortColorScales()" class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
               <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="spectrum-Icon spectrum-Icon--sizeS sortIcon" focusable="false" aria-hidden="true" aria-label="Sort">
                 <use xlink:href="#spectrum-css-icon-Arrow100"></use>
               </svg>
-              <span class="spectrum-ActionButton-label">Sort</span>
+              <span class="spectrum-ActionButton-label">並べ替え</span>
             </button>
           </div>
           <div id="image-preview"></div>
@@ -1361,7 +1362,7 @@ gtag('config', 'UA-156021617-1');</script>
 
         <div id="themeColorWrapper">
           <div id="themeColorEmptyState" class="spectrum-IllustratedMessage">  
-            <h2 class="spectrum-Typography spectrum-Heading spectrum-Heading3 spectrum-IllustratedMessage-heading">Add a color scale to begin</h2> 
+            <h2 class="spectrum-TypTypography spectrum-Heading spectrum-Heading3 spectrum-IllustratedMessage-heading">カラースケールを追加して開始してください</h2> 
           </div>
         </div>
 
@@ -1374,24 +1375,24 @@ gtag('config', 'UA-156021617-1');</script>
               <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Add lightness stop">
                 <use xlink:href="#spectrum-icon-18-Add"></use>
               </svg>
-              <span class="spectrum-ActionButton-label">Add</span>
+              <span class="spectrum-ActionButton-label">追加</span>
             </button>
             <button id="bulkLightnessButton" onclick="addLightnessBulk()" class="spectrum-ActionButton spectrum-ActionButton--sizeM  spectrum-ActionGroup-item">
               <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Import from colors">
                 <use xlink:href="#spectrum-icon-18-BoxAdd"></use>
               </svg>
-              <span class="spectrum-ActionButton-label">Import</span>
+              <span class="spectrum-ActionButton-label">インポート</span>
             </button>
-            <button title="Sort ratios ascending" id="sort" onclick="sortRatios()" class="spectrum-ActionButton spectrum-ActionButton--sizeM  spectrum-ActionGroup-item">
+            <button title="比率を昇順で並べ替え" id="sort" onclick="sortRatios()" class="spectrum-ActionButton spectrum-ActionButton--sizeM  spectrum-ActionGroup-item">
               <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="spectrum-Icon spectrum-Icon--sizeS sortIcon" focusable="false" aria-hidden="true" aria-label="Sort">
                 <use xlink:href="#spectrum-css-icon-Arrow100"></use>
               </svg>
-              <span class="spectrum-ActionButton-label">Sort</span>
+              <span class="spectrum-ActionButton-label">並べ替え</span>
             </button>
             <select class="spectrum-Picker spectrum-Picker--sizeM spectrum-ActionGroup-item" name="distribute" id="distribute">
-              <option value="none">Distribute</option>
-              <option value="ratios">Contrast ratios</option>
-              <option value="luminosity">Lightness</option>
+              <option value="none">分布しない</option>
+              <option value="ratios">コントラスト比</option>
+              <option value="luminosity">明度</option>
             </select>  
           </div>
   
@@ -1400,9 +1401,9 @@ gtag('config', 'UA-156021617-1');</script>
             <div id="luminosityGradient"></div>
             <div id="ratioInput-wrapper">
               <div class="ratioGrid">
-                <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM ratioGrid--ratio" id="ratioInputLabel">WCAG 2 contrast</label>  
-                <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM ratioGrid--luminosity">Lightness</label>  
-                <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM ratioGrid--status">Status</label>  
+                <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM ratioGrid--ratio" id="ratioInputLabel">WCAG 2 コントラスト</label>  
+                <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM ratioGrid--luminosity">明度</label>  
+                <label class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM ratioGrid--status">ステータス</label>  
               </div>
             </div>
           </div>
@@ -1428,13 +1429,13 @@ gtag('config', 'UA-156021617-1');</script>
       <div id="" class="spectrum-Content-Tabs">
         <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--quiet">
           <div id="tabColorWheel" class="spectrum-Tabs-item color-Tabs-item" tabindex="0" onclick="openColorTab(event, 'previewWrapper')">
-            <label class="spectrum-Tabs-itemLabel">Theme colors</label>
+            <label class="spectrum-Tabs-itemLabel">テーマカラー</label>
           </div>
           <div id="tabPaletteCharts" class="spectrum-Tabs-item color-Tabs-item" tabindex="0" onclick="openColorTab(event, 'paletteChartsWrapper')">
-            <label class="spectrum-Tabs-itemLabel">Chromaticity</label>
+            <label class="spectrum-Tabs-itemLabel">色度</label>
           </div>
           <div id="tabPaletteContrastCharts" class="spectrum-Tabs-item color-Tabs-item" tabindex="0" onclick="openColorTab(event, 'paletteContrastChartsWrapper')">
-            <label class="spectrum-Tabs-itemLabel">Lightness</label>
+            <label class="spectrum-Tabs-itemLabel">明度</label>
           </div>
           <div id="tabPaletteModel" class="spectrum-Tabs-item color-Tabs-item" tabindex="0" onclick="openColorTab(event, 'paletteModelWrapper')">
             <label class="spectrum-Tabs-itemLabel">3d model</label>
@@ -1452,13 +1453,13 @@ gtag('config', 'UA-156021617-1');</script>
         <div class="paletteContrastChartsGrid">
   
           <div class="spectrum-Form spectrum-Form--row" style="justify-content: space-between;">
-            <h5 class="spectrum-Heading spectrum-Heading--sizeXXS">Monochromatic preview (ordered by contrast ascending)</h5>
+            <h5 class="spectrum-Heading spectrum-Heading--sizeXXS">モノクロプレビュー（コントラスト昇順）</h5>
   
             <div class="spectrum-Form-item spectrum-Form-item--row">
-              <label for="chartLineType" class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left">Chart line type</label>
+              <label for="chartLineType" class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left">チャートの線種</label>
                 <select class="spectrum-Picker spectrum-Picker--sizeM" name="chartLineType" id="chartLineType">
-                  <option value="step">Steps</option>
-                  <option value="curve">Curve</option>
+                  <option value="step">ステップ</option>
+                  <option value="curve">曲線</option>
                   <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="spectrum-Picker-icon spectrum-UIIcon-ChevronDownMedium spectrum-Picker-icon">
                     <use xlink:href="#spectrum-css-icon-ChevronDownMedium"></use>
                   </svg>
@@ -1473,11 +1474,11 @@ gtag('config', 'UA-156021617-1');</script>
           
           <div id="contrastChartsWrapper">
             <div>
-              <h5 class="spectrum-Heading spectrum-Heading--sizeXXS">Contrast</h5>
+              <h5 class="spectrum-Heading spectrum-Heading--sizeXXS">コントラスト</h5>
               <div class="panel-SubTab-Content" id="contrastChart"></div>
             </div>
             <div>
-              <h5 class="spectrum-Heading spectrum-Heading--sizeXXS">Lightness</h5>
+              <h5 class="spectrum-Heading spectrum-Heading--sizeXXS">明度</h5>
               <div class="panel-SubTab-Content" id="luminosityChart"></div>
             </div>
           </div>
@@ -1495,11 +1496,11 @@ gtag('config', 'UA-156021617-1');</script>
               </div>
     
               <div class="spectrum-Form" id="chartsControls">
-                <h3 class="spectrum-Heading spectrum-Heading--sizeXXS ">Color wheel settings</h3>
+                <h3 class="spectrum-Heading spectrum-Heading--sizeXXS ">カラーホイール設定</h3>
                 <div class="spectrum-Form-item">
                   <div id="colorWheelLightnessWrapper" class="spectrum-Slider">
                     <div class="spectrum-Slider-labelContainer">
-                      <label class="spectrum-Slider-label" id="colorWheelLightnessLabel" for="colorWheelLightness">Color wheel lightness</label>
+                      <label class="spectrum-Slider-label" id="colorWheelLightnessLabel" for="colorWheelLightness">カラーホイールの明度</label>
                     </div>
                     <input class="spectrum-Slider-controls" type="range" min="0" max="100" value="50" id="colorWheelLightness" name="colorWheelLightness">
                   </div>
@@ -1509,22 +1510,22 @@ gtag('config', 'UA-156021617-1');</script>
                   <div class="spectrum-Switch">
                     <input type="checkbox" class="spectrum-Switch-input" id="colorPathsSwitch">
                     <span class="spectrum-Switch-switch"></span>
-                    <label class="spectrum-Switch-label" for="colorPathsSwitch">Show interpolation paths</label>
+                    <label class="spectrum-Switch-label" for="colorPathsSwitch">補間経路を表示</label>
                   </div>
                </div>
                <div class="spectrum-Form-item">
                 <div class="spectrum-Switch">
                   <input type="checkbox" class="spectrum-Switch-input" id="colorHarmonyLinesSwitch" checked="">
                   <span class="spectrum-Switch-switch"></span>
-                  <label class="spectrum-Switch-label" for="colorHarmonyLinesSwitch">Show color harmony lines</label>
+                  <label class="spectrum-Switch-label" for="colorHarmonyLinesSwitch">色相調和線を表示</label>
                 </div>
               </div>
     
                 <div class="spectrum-Form-item">
-                  <label for="colorDotsMode" class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left">Color dots display</label>
+                  <label for="colorDotsMode" class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left">カラードット表示</label>
                     <select class="spectrum-Picker spectrum-Picker--sizeM" name="colorDotsMode" id="colorDotsMode">
-                      <option value="colorScale">Scale cross-sections</option>
-                      <option value="colorKeys">All key colors</option>
+                      <option value="colorScale">スケール断面</option>
+                      <option value="colorKeys">すべての主要色</option>
                       <svg xmlns:xlink="http://www.w3.org/1999/xlink" class="spectrum-Picker-icon spectrum-UIIcon-ChevronDownMedium spectrum-Picker-icon">
                         <use xlink:href="#spectrum-css-icon-ChevronDownMedium"></use>
                       </svg>
@@ -1568,20 +1569,20 @@ gtag('config', 'UA-156021617-1');</script>
       <div class="spectrum-Panel-Item spectrum-Panel-Item--noPadding">
         <div class="spectrum-Panel-Item">
           <div class="spectrum-Panel-Title">
-            <h3 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXXS" id="{{ scaleType }}_nameLabel">
-              WCAG compliance
+            <h3 class="spectrum-TypTypography spectrum-Heading spectrum-Heading--sizeXXS" id="{{ scaleType }}_nameLabel">
+              WCAG 適合性
             </h3>
           </div>
           <div class="spectrum-Form spectrum-Form--row">
             <div class="spectrum-Form-item">
-              <label for="theme_complianceVersion" class="spectrum-FieldLabel spectrum-FieldLabel--left spectrum-Fieldlabel--sizeM">Version</label>
+              <label for="theme_complianceVersion" class="spectrum-FieldLabel spectrum-FieldLabel--left spectrum-Fieldlabel--sizeM">バージョン</label>
               <select class="spectrum-Picker spectrum-Picker--sizeM spectrum-ActionGroup-item pickerCompliance" name="theme_complianceVersion" id="theme_complianceVersion">
                 <option value="2">2.0</option>
                 <!-- <option value="3">3.0</option> -->
               </select>  
             </div>
             <div class="spectrum-Form-item">
-              <label for="theme_complianceLevel" class="spectrum-FieldLabel spectrum-FieldLabel--left spectrum-Fieldlabel--sizeM">Level</label>
+              <label for="theme_complianceLevel" class="spectrum-FieldLabel spectrum-FieldLabel--left spectrum-Fieldlabel--sizeM">レベル</label>
               <select class="spectrum-Picker spectrum-Picker--sizeM spectrum-ActionGroup-item pickerCompliance" name="theme_complianceLevel" id="theme_complianceLevel">
                 <option value="AA">AA</option>
                 <option value="AAA">AAA</option>
@@ -1592,12 +1593,12 @@ gtag('config', 'UA-156021617-1');</script>
         </div>
 
          <div class="spectrum-Panel-Item">
-          <span class="spectrum-Heading spectrum-Heading--sizeXXS spectrum-Panel-Item-Title">Colorblind support</span>
+          <span class="spectrum-Heading spectrum-Heading--sizeXXS spectrum-Panel-Item-Title">色覚特性サポート</span>
           <div class="spectrum-Form spectrum-Form--row">
             <div class="spectrum-Form-item">
               <div id="" class="spectrum-Slider">
                 <div class="spectrum-Slider-labelContainer">
-                  <label class="spectrum-Slider-label" id="{{ scaleType }}_ThresholdLabel" for="{{ scaleType }}_Threshold">Color difference (min DeltaE)</label>
+                  <label class="spectrum-Slider-label" id="{{ scaleType }}_ThresholdLabel" for="{{ scaleType }}_Threshold">色差（最小 ΔE）</label>
                   <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="{{ scaleType }}_ThresholdLabel" id="{{ scaleType }}_ThresholdValue">11</div>
                 </div>
                 <input class="spectrum-Slider-controls" type="range" min="11" max="50" step="1" value="11" id="{{ scaleType }}_Threshold" name="{{ scaleType }}_Threshold">
@@ -1608,7 +1609,7 @@ gtag('config', 'UA-156021617-1');</script>
               <div class="spectrum-Switch">
                 <input type="checkbox" class="spectrum-Switch-input" id="{{ scaleType }}_minContrast">
                 <span class="spectrum-Switch-switch"></span>
-                <label class="spectrum-Switch-label" for="{{ scaleType }}_minContrast">1.4.11 compliant</label>
+                <label class="spectrum-Switch-label" for="{{ scaleType }}_minContrast">1.4.11 適合</label>
               </div>
             </div>
 
@@ -1625,7 +1626,7 @@ gtag('config', 'UA-156021617-1');</script>
                       <use xlink:href="#spectrum-css-icon-Dash100"></use>
                     </svg>
                   </span>
-                  <span class="spectrum-Checkbox-label">Protan (red/green)</span>
+                  <span class="spectrum-Checkbox-label">プロタン型（赤/緑）</span>
                 </label>
               </div>
               <div class="spectrum-Form-item">
@@ -1639,7 +1640,7 @@ gtag('config', 'UA-156021617-1');</script>
                       <use xlink:href="#spectrum-css-icon-Dash100"></use>
                     </svg>
                   </span>
-                  <span class="spectrum-Checkbox-label">Deutan (red/green)</span>
+                  <span class="spectrum-Checkbox-label">デューテラン型（赤/緑）</span>
                 </label>
               </div>
             </div>
@@ -1655,7 +1656,7 @@ gtag('config', 'UA-156021617-1');</script>
                       <use xlink:href="#spectrum-css-icon-Dash100"></use>
                     </svg>
                   </span>
-                  <span class="spectrum-Checkbox-label">Tritan (blue/yellow)</span>
+                  <span class="spectrum-Checkbox-label">トリタン型（青/黄）</span>
                 </label>
               </div>
 
@@ -1670,7 +1671,7 @@ gtag('config', 'UA-156021617-1');</script>
                       <use xlink:href="#spectrum-css-icon-Dash100"></use>
                     </svg>
                   </span>
-                  <span class="spectrum-Checkbox-label">Achromatopsia</span>
+                  <span class="spectrum-Checkbox-label">全色盲</span>
                 </label>
               </div>
              
@@ -1692,10 +1693,10 @@ gtag('config', 'UA-156021617-1');</script>
     <div class="spectrum-Content-Tabs">
       <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--quiet">
         <div id="tabContrastingPairs" class="spectrum-Tabs-item a11y-Tabs-item" tabindex="0" onclick="openAccessibilityTab(event, 'contrastPairsWrapper')">
-          <label class="spectrum-Tabs-itemLabel">Contrasting pairs</label>
+          <label class="spectrum-Tabs-itemLabel">コントラストのペア</label>
         </div>
         <div id="tabColorblindSafe" class="spectrum-Tabs-item a11y-Tabs-item" tabindex="0" onclick="openAccessibilityTab(event, 'colorBlindSafeWrapper')">
-          <label class="spectrum-Tabs-itemLabel">Colorblind safe</label>
+          <label class="spectrum-Tabs-itemLabel">色覚特性に配慮</label>
         </div>
       </div>
     </div>
@@ -1714,7 +1715,7 @@ gtag('config', 'UA-156021617-1');</script>
     </div>
 
     <div id="colorBlindSafeWrapper" class="a11y-Tabs-content">
-      Color blind safe colors
+      色覚特性に配慮した色
     </div>
 
   </main>
@@ -1728,27 +1729,27 @@ gtag('config', 'UA-156021617-1');</script>
     <div class="spectrum-Content-Tabs">
       <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--quiet">
         <div id="tabJSParameters" class="spectrum-Tabs-item main-Tabs-item" tabindex="0" onclick="openTab(event, 'parameterWrapper')">
-          <label class="spectrum-Tabs-itemLabel">Javascript</label>
+          <label class="spectrum-Tabs-itemLabel">JavaScript</label>
         </div>
         <div id="tabCSS" class="spectrum-Tabs-item main-Tabs-item" tabindex="0" onclick="openTab(event, 'cssWrapper')">
           <label class="spectrum-Tabs-itemLabel">CSS</label>
         </div>
         <div id="tabTokens" class="spectrum-Tabs-item main-Tabs-item" tabindex="0" onclick="openTab(event, 'tokensWrapper')">
-          <label class="spectrum-Tabs-itemLabel">Design tokens</label>
+          <label class="spectrum-Tabs-itemLabel">デザイントークン</label>
         </div>
       </div>
     </div>
     <div id="parameterWrapper" class="tabcontent">
       <div class="tabHeader"> 
         <div>
-          <h2 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXS">Parameters for @adobe/leonardo-contrast-colors</h2>
-          <p class="spectrum-Body spectrum-Body--sizeXS">See 
-            <a href="#" class="spectrum-Link" target="_blank">Getting started</a> 
-            for information on how to use these parameters.
+          <h2 class="spectrum-TypTypography spectrum-Heading spectrum-Heading--sizeXS">@adobe/leonardo-contrast-colors 用パラメーター</h2>
+          <p class="spectrum-Body spectrum-Body--sizeXS">使い方の詳細は
+            <a href="#" class="spectrum-Link" target="_blank">クイックスタート</a>
+            を参照してください。
           </p>
         </div>
         <button id="copyThemeParams" data-clipboard-target="#themeJSParams" class="spectrum-ActionButton spectrum-ActionButton--sizeM copyButton">
-          <span class="spectrum-ActionButton-label">Copy parameters</span>
+          <span class="spectrum-ActionButton-label">パラメーターをコピー</span>
         </button>
       </div>
 
@@ -1759,9 +1760,9 @@ gtag('config', 'UA-156021617-1');</script>
 
     <div id="cssWrapper" class="tabcontent">
       <div class="tabHeader">
-        <h2 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXS">CSS properties</h2>
+        <h2 class="spectrum-TypTypography spectrum-Heading spectrum-Heading--sizeXS">CSS プロパティ</h2>
         <button id="copyThemeCSS" data-clipboard-target="#themeCSSParams" class="spectrum-ActionButton spectrum-ActionButton--sizeM copyButton">
-          <span class="spectrum-ActionButton-label">Copy CSS</span>
+          <span class="spectrum-ActionButton-label">CSS をコピー</span>
         </button>
       </div>
 
@@ -1773,14 +1774,13 @@ gtag('config', 'UA-156021617-1');</script>
     <div id="tokensWrapper" class="tabcontent">
       <div class="tabHeader">
         <div>
-          <h2 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXS">Design tokens</h2>
-          <p class="spectrum-Body spectrum-Body--sizeXS">See 
-            <a href="https://www.w3.org/community/design-tokens/" class="spectrum-Link" target="_blank">w3c working group spec</a> 
-            for details.
+          <h2 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXS">デザイントークン</h2>
+          <p class="spectrum-Body spectrum-Body--sizeXS">
+            詳細は <a href="https://www.w3.org/community/design-tokens/" class="spectrum-Link" target="_blank">W3C ワーキンググループの仕様</a> を参照してください。
           </p>
         </div>
         <button id="copyThemeTokens" data-clipboard-target="#themeTokensParams" class="spectrum-ActionButton spectrum-ActionButton--sizeM copyButton">
-          <span class="spectrum-ActionButton-label">Copy Tokens</span>
+          <span class="spectrum-ActionButton-label">トークンをコピー</span>
         </button>
       </div>
 
@@ -1795,8 +1795,8 @@ gtag('config', 'UA-156021617-1');</script>
     <div class="spectrum-Panel-ContentWrapper">
       <div class="spectrum-Panel-Item">
         <div class="spectrum-Panel-Title">
-          <h3 class="spectrum-Typography spectrum-Heading spectrum-Heading--sizeXXS" id="outputFormatHeading">
-            Output color format
+          <h3 class="spectrum-TypTypography spectrum-Heading spectrum-Heading--sizeXXS" id="outputFormatHeading">
+            出力カラーフォーマット
           </h3>
         </div>
         <div class="spectrum-Form spectrum-Form--spaced" style="margin-top: var(--spectrum-global-dimension-size-100)">
@@ -1811,9 +1811,9 @@ gtag('config', 'UA-156021617-1');</script>
                 <use xlink:href="#spectrum-css-icon-ChevronDownMedium"></use>
               </svg>
             </select>
-            <p class="spectrum-Body spectrum-Body--sizeXS" style="margin-top: var(--spectrum-global-dimension-size-100)">Output formats compliant with 
+            <p class="spectrum-Body spectrum-Body--sizeXS" style="margin-top: var(--spectrum-global-dimension-size-100)">出力形式は
               <a class="spectrum-Link" href="https://www.w3.org/TR/css-color-4/" target="_blank">CSS Color Module Level 4</a>
-              . Not all formats supported.</p>
+              に準拠しています（一部フォーマットは未対応）。</p>
           </div>
         </div>
       </div>
@@ -1855,25 +1855,25 @@ gtag('config', 'UA-156021617-1');</script>
 
     <div class="spectrum-Dialog spectrum-Dialog--small spectrum-Dialog--confirmation" id="addBulkLightnessDialog">
   <div class="spectrum-Dialog-grid">
-    <h2 class="spectrum-Dialog-heading">Import lightness stops</h2>
+    <h2 class="spectrum-Dialog-heading">明度ステップをインポート</h2>
     <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
     <section class="spectrum-Dialog-content">
       <span class="spectrum-Typography">
-        <p class="spectrum-Body4">Enter hex colors separated by comma or new line.</p>
-        <p class="spectrum-Body4">These will be converted and added as <b>lightness stops<b>. </b></b></p>
+        <p class="spectrum-Body4">16 進カラーコードをカンマまたは改行で区切って入力してください。</p>
+        <p class="spectrum-Body4">入力した色は<b>明度ステップ</b>として追加されます。</p>
       </span>
       <div class="spectrum-Form spectrum-Form--labelsAbove">
         <div class="spectrum-Form-item">
-          <label for="fieldLabelExample-lifestory" class="spectrum-Form-itemLabel">Colors (Hex)</label>
+          <label for="fieldLabelExample-lifestory" class="spectrum-Form-itemLabel">色（HEX）</label>
           <div class="spectrum-Textfield spectrum-Textfield--multiline" style="width:100%;">
-            <textarea id="bulkLightnessColors" class="spectrum-Textfield-input" placeholder="Enter colors here"></textarea>
+            <textarea id="bulkLightnessColors" class="spectrum-Textfield-input" placeholder="ここに色を入力"></textarea>
           </div>
         </div>
       </div>
     </section>
     <div class="spectrum-ButtonGroup spectrum-Dialog-buttonGroup spectrum-Dialog-buttonGroup--noFooter">
-      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary spectrum-ButtonGroup-item" onclick="cancelLightnessBulk()">Cancel</button>
-      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--cta spectrum-ButtonGroup-item" onclick="bulkLightnessInput()">Add</button>
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary spectrum-ButtonGroup-item" onclick="cancelLightnessBulk()">キャンセル</button>
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--cta spectrum-ButtonGroup-item" onclick="bulkLightnessInput()">追加</button>
 
     </div>
   </div>
@@ -1881,12 +1881,12 @@ gtag('config', 'UA-156021617-1');</script>
 
     <div class="spectrum-Dialog spectrum-Dialog--small" id="addFromURLDialog">
   <div class="spectrum-Dialog-header">
-    <h2 class="spectrum-Dialog-title">Import from URL</h2>
+    <h2 class="spectrum-Dialog-title">URL からインポート</h2>
   </div>
   <div class="spectrum-Dialog-content">
     <span class="spectrum-Typography">
-      <p class="spectrum-Body4">Enter the URL of your existing color to add to this theme.</p>
-      <p class="spectrum-Body4">The configurations will be added to a new color scale. </p>
+      <p class="spectrum-Body4">既存カラーの URL を入力すると、このテーマに追加できます。</p>
+      <p class="spectrum-Body4">設定は新しいカラースケールとして追加されます。</p>
     </span>
     <div class="spectrum-Form spectrum-Form--labelsAbove">
       <div class="spectrum-Form-item">
@@ -1898,16 +1898,17 @@ gtag('config', 'UA-156021617-1');</script>
     </div>
   </div>
   <div class="spectrum-Dialog-footer">
-    <button class="spectrum-Button spectrum-Button--secondary" onclick="cancelURL()">Cancel</button>
-    <button class="spectrum-Button spectrum-Button--cta" id="addFromURLButton">Import color</button>
+    <button class="spectrum-Button spectrum-Button--secondary" onclick="cancelURL()">キャンセル</button>
+    <button class="spectrum-Button spectrum-Button--cta" id="addFromURLButton">カラーをインポート</button>
   </div>
 </div>
+
     
     <div id="toastCVDpreview" class="spectrum-Toast">
   <div class="spectrum-Toast-body">
-    <div class="spectrum-Toast-content">You're in CVD simulation mode. Copying generated colors will not be affected by simulation mode.</div>
+    <div class="spectrum-Toast-content">現在は CVD シミュレーションモードです。生成された色をコピーしてもシミュレーションの影響は受けません。</div>
     <button onclick="neverShowToast()" class="spectrum-Button spectrum-Button--sizeM spectrum-Button--overBackground spectrum-Button--quiet">
-      <span class="spectrum-Button-label">Don't show</span>
+      <span class="spectrum-Button-label">今後表示しない</span>
     </button>
   </div>
   <div class="spectrum-Toast-buttons">
@@ -1917,10 +1918,11 @@ gtag('config', 'UA-156021617-1');</script>
       </svg>
     </button>
   </div>
-</div>  
+</div>
+  
   </div>
 
-<script src="theme.d9b3a3de.js"></script>
+<script src="theme.96a48089.js"></script>
 
 </body>
 </html>
