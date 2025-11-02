@@ -48,7 +48,7 @@ gtag('config', 'UA-156021617-1');</script>
   <meta name="theme-color" content="#ffffff">
 
   <link rel="stylesheet" href="https://use.typekit.net/sik3zpp.css">
-<link rel="stylesheet" href="tools.2fdf3ead.css"></head>
+<link rel="stylesheet" href="tools.d6912241.css"></head>
 </head>
 
 <body class="spectrum spectrum--medium appFrame">
@@ -89,10 +89,10 @@ gtag('config', 'UA-156021617-1');</script>
       </div>
 
       <div id="tabContrast" class="spectrum-Tabs-item app-Tabs-item" tabindex="0" onclick="openAppTab(event, 'colorCompare')">
-        <label class="spectrum-Tabs-itemLabel">Compare</label>
+        <label class="spectrum-Tabs-itemLabel">比較</label>
       </div>
       <div id="tabConverter" class="spectrum-Tabs-item app-Tabs-item" tabindex="0" onclick="openAppTab(event, 'colorConverter')">
-        <label class="spectrum-Tabs-itemLabel">Convert</label>
+        <label class="spectrum-Tabs-itemLabel">変換</label>
       </div>
 
     </div>
@@ -106,6 +106,7 @@ gtag('config', 'UA-156021617-1');</script>
 </a>
   </div>
 </header>
+
     <!-- Home Tab -->
 <div id="home" class="AppTab appFrameSideNav">
   <nav class="sideNav-Wrapper">
@@ -1170,19 +1171,19 @@ gtag('config', 'UA-156021617-1');</script>
     <div class="floating-wrapper">
 
       <h1 class="spectrum-Heading spectrum-Heading--sizeXL spectrum-Heading--heavy">
-        Compare colors
+        色を比較
       </h1>
       <p class="spectrum-Body spectrum-Body--sizeM">
-        Compare two colors to check contrast, difference, and colorblind safety.
+        2 色のコントラスト・色差・色覚特性への配慮を確認できます。
       </p>
 
       <div class="spectrum-Form spectrum-Form--row spectrum-Form--topAlign" id="colorCompareForm">
         <div class="spectrum-Form-item">
           <label class="spectrum-Heading spectrum-Heading--sizeXXS" id="compareColorOne" for="compareColorOneInput">
-            Foreground color*
+            前景色*
           </label>
           <div class="spectrum-Textfield spectrum-Textfield--fullwidth">
-            <input type="text" class="spectrum-Textfield-input" id="compareColorOneInput" placeholder="Enter color" value="#7AC600" aria-labelledby="compareColorOneInput">
+            <input type="text" class="spectrum-Textfield-input" id="compareColorOneInput" placeholder="色を入力" value="#7AC600" aria-labelledby="compareColorOneInput">
           </div>
           <div style="position: relative;">
             <input type="color" class="swatch--large" id="compareColorOne_picker">
@@ -1205,10 +1206,10 @@ gtag('config', 'UA-156021617-1');</script>
   
         <div class="spectrum-Form-item">
           <label class="spectrum-Heading spectrum-Heading--sizeXXS" id="compareColorTwo" for="compareColorTwoInput">
-            Background color
+            背景色
           </label>
           <div class="spectrum-Textfield spectrum-Textfield--fullwidth">
-            <input type="text" class="spectrum-Textfield-input" id="compareColorTwoInput" placeholder="Enter color" value="#0E55A8" aria-labelledby="compareColorTwoInput">
+            <input type="text" class="spectrum-Textfield-input" id="compareColorTwoInput" placeholder="色を入力" value="#0E55A8" aria-labelledby="compareColorTwoInput">
           </div>
           <div style="position: relative;">
             <input type="color" class="swatch--large" id="compareColorTwo_picker">
@@ -1219,19 +1220,19 @@ gtag('config', 'UA-156021617-1');</script>
       </div>
 
       <h4 class="spectrum-Heading spectrum-Heading--sizeXS">
-        Supported formats
+        対応フォーマット
       </h4>
       <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--quiet spectrum-Table--compact">
         <thead class="spectrum-Table-head">
           <tr>
             <th class="spectrum-Table-headCell is-sortable is-sorted-desc" aria-sort="descending" tabindex="0">
-              Color space
+              色空間
             </th>
             <th class="spectrum-Table-headCell is-sortable" aria-sort="descending">
-              Opaque
+              不透明
             </th>
             <th class="spectrum-Table-headCell">
-              Alpha
+              アルファ
             </th>
           </tr>
         </thead>
@@ -1262,10 +1263,10 @@ gtag('config', 'UA-156021617-1');</script>
     <div class="spectrum-Panel-Item">
       <div class="spectrum-Tabs spectrum-Tabs--horizontal">
         <div id="tabSubPanelContrastChart" class="spectrum-Tabs-item compare-Tabs-item" tabindex="0" onclick="openCompareTab(event, 'contrastContent')">
-          <label class="spectrum-Tabs-itemLabel">Contrast</label>
+          <label class="spectrum-Tabs-itemLabel">コントラスト</label>
         </div>
         <div id="tabSubPanelLuminosityChart" class="spectrum-Tabs-item compare-Tabs-item" tabindex="0" onclick="openCompareTab(event, 'colorDiffContent')">
-          <label class="spectrum-Tabs-itemLabel">Color difference</label>
+          <label class="spectrum-Tabs-itemLabel">色差</label>
         </div>
       </div>
 
@@ -1274,7 +1275,7 @@ gtag('config', 'UA-156021617-1');</script>
           <div id="contrastOutput"></div>
           <div class="spectrum-Form">
             <div class="spectrum-Form-item">
-              <label for="complianceLevel" class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left">Compliance level</label>
+              <label for="complianceLevel" class="spectrum-FieldLabel spectrum-Fieldlabel--sizeM spectrum-FieldLabel--left">適合レベル</label>
               <select class="spectrum-Picker spectrum-Picker--sizeM spectrum-ActionGroup-item pickerCompliance" name="complianceLevel" id="complianceLevel">
                 <option value="AA">AA</option>
                 <option value="AAA">AAA</option>
@@ -1292,13 +1293,13 @@ gtag('config', 'UA-156021617-1');</script>
         
         <section class="spectrum-Typography">
           <h4 class="spectrum-Heading spectrum-Heading--sizeS">
-            How this works
+            仕組み
           </h4>
           <p class="spectrum-Body spectrum-Body--sizeS">
-            Ratings are calculated by first converting the colors to their simulated counterparts. The simulated values approximate the colors that would be seen by fully deficient vision of each particular type. The simulated colors are then compared using the DeltaE 2000 color difference formula. A color difference value of 11 or more is considered passing; anything lower is too similar to distinguish. 
+            評価は各色を色覚特性ごとの完全欠損を想定したシミュレーション値に変換し、ΔE2000 色差で比較することで算出します。色差が 11 以上であれば合格、それ未満は区別が困難とみなします。
           </p>
           <p class="spectrum-Body spectrum-Body--sizeS">
-            The color difference meters visualize the DeltaE value to give reference to how different the colors would appear for each color vision deficiency. 
+            色差メーターは ΔE の値を視覚化し、各色覚特性でどの程度色が違って見えるかを把握できるようにしています。
           </p>
         </section>
         
@@ -1309,6 +1310,7 @@ gtag('config', 'UA-156021617-1');</script>
   </div>
 
 </div>
+
     <!-- Color Converter Tab -->
 <div id="colorConverter" class="AppTab appFramePanelRight--large">
 
@@ -1316,16 +1318,16 @@ gtag('config', 'UA-156021617-1');</script>
     <div class="floating-wrapper">
 
       <h1 class="spectrum-Heading spectrum-Heading--sizeXL spectrum-Heading--heavy">
-        Convert color
+        色を変換
       </h1>
 
       <div class="spectrum-Form spectrum-Form--row spectrum-Form--topAlign" id="colorConvertForm">
         <div class="spectrum-Form-item">
           <label class="spectrum-Heading spectrum-Heading--sizeXXS" id="convertColorOne" for="convertColorOneInput">
-            Color
+            色
           </label>
           <div class="spectrum-Textfield spectrum-Textfield--fullwidth">
-            <input type="text" class="spectrum-Textfield-input" id="convertColorOneInput" placeholder="Enter color" value="#7AC600" aria-labelledby="convertColorOneInput">
+            <input type="text" class="spectrum-Textfield-input" id="convertColorOneInput" placeholder="色を入力" value="#7AC600" aria-labelledby="convertColorOneInput">
           </div>
           <div style="position: relative;">
             <input type="color" class="swatch--large" id="convertColorOne_picker">
@@ -1336,13 +1338,13 @@ gtag('config', 'UA-156021617-1');</script>
 
       <div class="spectrum-Typography">
         <h3 class="spectrum-Heading spectrum-Heading--sizeS" style="margin-top: 48px">
-          Have a lot to convert?
+          大量に変換したい場合は？
         </h3>
         <p class="spectrum-Body spectrum-Body--sizeS">
-          Use the bulk converter to convert all your colors in the formats you need.
+          一括変換ツールを使うと、必要な形式へまとめて変換できます。
         </p>
         <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--primary" id="bulkConvertButton" onclick="bulkConvert()">
-          Convert bulk
+          一括変換
         </button> 
       </div>
     </div>
@@ -1359,22 +1361,22 @@ gtag('config', 'UA-156021617-1');</script>
 
   <div class="addBulkColorDialog spectrum-Dialog spectrum-Dialog--medium spectrum-Dialog--confirmation" id="bulkConvertDialog">
   <div class="spectrum-Dialog-grid">
-    <h2 class="spectrum-Dialog-heading">Convert bulk</h2>
+    <h2 class="spectrum-Dialog-heading">一括変換</h2>
     <hr class="spectrum-Divider spectrum-Divider--sizeM spectrum-Divider--horizontal spectrum-Dialog-divider">
     <section class="spectrum-Dialog-content">
       <span class="spectrum-Typography">
-        <p class="spectrum-Body spectrum-Body--sizeS">Enter hex colors separated by comma or new line. </p>
-        <p class="spectrum-Body spectrum-Body--sizeS">Colors will be converted into the selected color spaces and downloaded as a CSV file.</p>
+        <p class="spectrum-Body spectrum-Body--sizeS">16 進カラーコードをカンマまたは改行で区切って入力してください。</p>
+        <p class="spectrum-Body spectrum-Body--sizeS">指定した色空間に変換し、CSV ファイルとしてダウンロードします。</p>
       </span>
       <div class="spectrum-Form spectrum-Form--labelsAbove">
         <div class="spectrum-Form-item">
-          <label for="fieldLabelExample-lifestory" class="spectrum-Form-itemLabel">Colors (hex)</label>
+          <label for="fieldLabelExample-lifestory" class="spectrum-Form-itemLabel">色（HEX）</label>
           <div class="spectrum-Textfield spectrum-Textfield--multiline" style="width:100%;">
-            <textarea id="bulkConvertColors" class="spectrum-Textfield-input" placeholder="Enter colors here"></textarea>
+            <textarea id="bulkConvertColors" class="spectrum-Textfield-input" placeholder="ここに色を入力"></textarea>
           </div>
         </div>
         <div class="spectrum-Form-item">
-          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel" for="spectrum-textinput-instance">Color spaces / formats</label>
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel" for="spectrum-textinput-instance">色空間 / フォーマット</label>
           <div class="spectrum-Form-itemField">
             <div class="spectrum-FieldGroup spectrum-FieldGroup--vertical">
               <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item">
@@ -1523,7 +1525,7 @@ gtag('config', 'UA-156021617-1');</script>
 
       <div class="spectrum-Form spectrum-Form--labelsAbove">
         <div class="spectrum-Form-item">
-          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel" for="spectrum-textinput-instance">Contrast</label>
+          <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-Form-itemLabel" for="spectrum-textinput-instance">コントラスト</label>
           <div class="spectrum-Form-itemField">
             <div class="spectrum-FieldGroup">
               <label class="spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-FieldGroup-item">
@@ -1533,7 +1535,7 @@ gtag('config', 'UA-156021617-1');</script>
                     <use xlink:href="#spectrum-css-icon-Checkmark100"></use>
                   </svg>
                 </span>
-                <span class="spectrum-Checkbox-label">Relative luminance</span>
+                <span class="spectrum-Checkbox-label">相対輝度</span>
               </label>
             </div>
           </div>
@@ -1552,7 +1554,7 @@ gtag('config', 'UA-156021617-1');</script>
           </div>
           <div class="spectrum-Form-itemField">
             <div class="spectrum-Form-item spectrum-Form-item--row">
-              <label class="spectrum-FieldLabel spectrum-FieldLabel--left spectrum-Fieldlabel--sizeM ">Background color</label>
+              <label class="spectrum-FieldLabel spectrum-FieldLabel--left spectrum-Fieldlabel--sizeM ">背景色</label>
               <input type="color" id="bulkConvertBackground" class="keyColor-Item keyColor-Item--standalone">
             </div>
           </div>
@@ -1561,16 +1563,17 @@ gtag('config', 'UA-156021617-1');</script>
       </div>
     </section>
     <div class="spectrum-ButtonGroup spectrum-Dialog-buttonGroup spectrum-Dialog-buttonGroup--noFooter">
-      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary spectrum-ButtonGroup-item" onclick="cancelBulkConvert()">Cancel</button>
-      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--cta spectrum-ButtonGroup-item" id="bulkConvert">Convert and download</button>
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--secondary spectrum-ButtonGroup-item" onclick="cancelBulkConvert()">キャンセル</button>
+      <button class="spectrum-Button spectrum-Button--sizeM spectrum-Button--cta spectrum-ButtonGroup-item" id="bulkConvert">変換してダウンロード</button>
 
     </div>
   </div>
 </div>
 
 </div>
+
   </div>
 
-<script src="tools.55895bea.js"></script>
+<script src="tools.b1f6ac49.js"></script>
 
 </body></html>
