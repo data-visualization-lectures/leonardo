@@ -564,7 +564,7 @@ function showSimulatedColors(array, sortBySimmilarity) {
           let textSpan = document.createElement('p');
           textSpan.id = 'simulationDisclaimer';
           textSpan.className = "spectrum-Body spectrum-Body--sizeXXS";
-          textSpan.innerHTML = 'Simulated colors are ordered by hue and saturation for best comparison of similar colors.'
+          textSpan.innerHTML = '類似した色を比較しやすくするため、シミュレーション結果は色相と彩度の順に並べ替えています。'
           parentWrap.appendChild(textSpan)
         }
       } 

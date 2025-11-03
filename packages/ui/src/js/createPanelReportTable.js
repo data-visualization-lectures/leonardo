@@ -50,7 +50,7 @@ function createPanelReportTable(colors, background, scaleType, level) {
   let reportWrapper = document.getElementById(`${scaleType}_a11yTable`);
   reportWrapper.innerHTML = ' ';
 
-  let headers = ['Compared colors', 'Preview', 'Status', 'Contrast', 'Color difference'];
+  const headers = ['比較対象', 'プレビュー', '判定', 'コントラスト', '色差'];
   let rows = []
 
   for(let i=0; i < colors.length; i++) {
@@ -62,16 +62,16 @@ function createPanelReportTable(colors, background, scaleType, level) {
     let meterPercent = round(deltaE, 2);
 
     let uiClass = (contrast < WCAGmin || deltaE < minimumThreshold) ? 'negative' : 'positive';
-    let uiStatus = (contrast < WCAGmin || deltaE < minimumThreshold) ? 'Fail' : 'Pass';
+    const uiStatus = (contrast < WCAGmin || deltaE < minimumThreshold) ? '不適合' : '適合';
 
     let meterClass = (deltaE < minimumThreshold) ? 'is-negative' : 'is-positive';
     let color1;
     if(scaleType === 'sequential') {
-      color1 = (i === 0) ? 'Start color' : 'End color';
+      color1 = (i === 0) ? '開始色' : '終了色';
     } else {
-      color1 = (i === 0) ? 'Start color' : ((i === 1) ? 'Middle color' : 'End color');
+      color1 = (i === 0) ? '開始色' : ((i === 1) ? '中間色' : '終了色');
     } 
-    let color2 = 'Background';
+    const color2 = '背景色';
 
     let rowItem = [
       `${color1} vs ${color2}`,
@@ -83,7 +83,7 @@ function createPanelReportTable(colors, background, scaleType, level) {
       `<span class="spectrum-Body spectrum-Body--sizeM">${round(contrast, 2)}:1</span>`,
       `<div">
         <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeM deltaE-meter ${meterClass}" value="${meterPercent}" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-          <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-ProgressBar-label">Delta E</div>
+          <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-ProgressBar-label">色差 ΔE</div>
           <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-ProgressBar-percentage">${meterPercent}</div>
           <div class="spectrum-ProgressBar-track">
             <div class="spectrum-ProgressBar-fill" style="width: ${meterPercent}%;"></div>
@@ -106,9 +106,9 @@ function createPanelReportTable(colors, background, scaleType, level) {
     let meterClass = (deltaE < minimumThreshold) ? 'is-negative' : 'is-positive';
   
     let uiClass = (contrast < WCAGmin || deltaE < minimumThreshold) ? 'negative' : 'positive';
-    let uiStatus = (contrast < WCAGmin || deltaE < minimumThreshold) ? 'Fail' : 'Pass';
-    let color1 = 'Start color';
-    let color2 = 'End color';
+    const uiStatus = (contrast < WCAGmin || deltaE < minimumThreshold) ? '不適合' : '適合';
+    const color1 = '開始色';
+    const color2 = '終了色';
   
     let rowItem = [
       `${color1} vs ${color2}`,
@@ -120,7 +120,7 @@ function createPanelReportTable(colors, background, scaleType, level) {
       `<span class="spectrum-Body spectrum-Body--sizeM">${round(contrast, 2)}:1</span>`,
       `<div">
         <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeM deltaE-meter ${meterClass}" value="${meterPercent}" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-          <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-ProgressBar-label">Delta E</div>
+          <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-ProgressBar-label">色差 ΔE</div>
           <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-ProgressBar-percentage">${meterPercent}</div>
           <div class="spectrum-ProgressBar-track">
             <div class="spectrum-ProgressBar-fill" style="width: ${meterPercent}%;"></div>
@@ -148,11 +148,11 @@ function createPanelReportTable(colors, background, scaleType, level) {
   
     let uiClass1 = (contrast1 < WCAGmin || deltaE1 < minimumThreshold) ? 'negative' : 'positive';
     let uiClass2 = (contrast2 < WCAGmin || deltaE2 < minimumThreshold) ? 'negative' : 'positive';
-    let uiStatus1 = (contrast1 < WCAGmin || deltaE1 < minimumThreshold) ? 'Fail' : 'Pass';
-    let uiStatus2 = (contrast2 < WCAGmin || deltaE2 < minimumThreshold) ? 'Fail' : 'Pass';
-    let color1 = 'Start color';
-    let color2 = 'Middle color';
-    let color3 = 'End color';
+    const uiStatus1 = (contrast1 < WCAGmin || deltaE1 < minimumThreshold) ? '不適合' : '適合';
+    const uiStatus2 = (contrast2 < WCAGmin || deltaE2 < minimumThreshold) ? '不適合' : '適合';
+    const color1 = '開始色';
+    const color2 = '中間色';
+    const color3 = '終了色';
   
     let rowItem1 = [
       `${color1} vs ${color2}`,
@@ -164,7 +164,7 @@ function createPanelReportTable(colors, background, scaleType, level) {
       `<span class="spectrum-Body spectrum-Body--sizeM">${round(contrast1, 2)}:1</span>`,
       `<div">
         <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeM deltaE-meter ${meterClass1}" value="${meterPercent1}" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-          <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-ProgressBar-label">Delta E</div>
+          <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-ProgressBar-label">色差 ΔE</div>
           <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-ProgressBar-percentage">${meterPercent1}</div>
           <div class="spectrum-ProgressBar-track">
             <div class="spectrum-ProgressBar-fill" style="width: ${meterPercent1}%;"></div>
@@ -182,7 +182,7 @@ function createPanelReportTable(colors, background, scaleType, level) {
       `<span class="spectrum-Body spectrum-Body--sizeM">${round(contrast2, 2)}:1</span>`,
       `<div">
         <div class="spectrum-ProgressBar spectrum-ProgressBar--sizeM deltaE-meter ${meterClass2}" value="${meterPercent2}" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-          <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-ProgressBar-label">Delta E</div>
+          <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-ProgressBar-label">色差 ΔE</div>
           <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM spectrum-ProgressBar-percentage">${meterPercent2}</div>
           <div class="spectrum-ProgressBar-track">
             <div class="spectrum-ProgressBar-fill" style="width: ${meterPercent2}%;"></div>

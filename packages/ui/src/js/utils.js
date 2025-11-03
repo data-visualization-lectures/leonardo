@@ -481,11 +481,11 @@ function getChannelsAndFunction(mode) {
   if(mode === 'RGB') {
     func = 'hsl';
     c1 = 0;
-    c1Label = `Hue (HSL - H)`;
+    c1Label = `色相 (HSL - H)`;
     c2 = 1;
-    c2Label = `Saturation (HSL - S)`;
+    c2Label = `彩度 (HSL - S)`;
     c3 = 2;
-    c3Label = `Lightness (${mode} - L)`;
+    c3Label = `明度 (${mode} - L)`;
     yMin = 0;
     yMax = 360;
     yMin2 = 0;
@@ -494,40 +494,40 @@ function getChannelsAndFunction(mode) {
   if(mode === 'LAB') {
     func = 'lab';
     c1 = 1;
-    c1Label = `Redness / Greenness (${mode} - A)`;
+    c1Label = `赤み / 緑み (${mode} - A)`;
     c2 = 2;
-    c2Label = `Blueness / Yellowness (${mode} - B)`;
+    c2Label = `青み / 黄み (${mode} - B)`;
     c3 = 0;
-    c3Label = `Lightness (${mode} - L)`;
+    c3Label = `明度 (${mode} - L)`;
   }
   if(mode === 'LCH') {
     func = 'lch';
     c1 = 2;
-    c1Label = `Hue (${mode} - H)`;
+    c1Label = `色相 (${mode} - H)`;
     c2 = 1;
-    c2Label = `Chroma (${mode} - C)`;
+    c2Label = `クロマ (${mode} - C)`;
     c3 = 0;
-    c3Label = `Lightness (${mode} - L)`;
+    c3Label = `明度 (${mode} - L)`;
     yMin = 0;
     yMax = 360;
   }
   if(mode === 'OKLAB') {
     func = 'oklab';
     c1 = 1;
-    c1Label = `Redness / Greenness (${mode} - A)`;
+    c1Label = `赤み / 緑み (${mode} - A)`;
     c2 = 2;
-    c2Label = `Blueness / Yellowness (${mode} - B)`;
+    c2Label = `青み / 黄み (${mode} - B)`;
     c3 = 0;
-    c3Label = `Lightness (${mode} - L)`;
+    c3Label = `明度 (${mode} - L)`;
   }
   if(mode === 'OKLCH') {
     func = 'oklch';
     c1 = 2;
-    c1Label = `Hue (${mode} - H)`;
+    c1Label = `色相 (${mode} - H)`;
     c2 = 1;
-    c2Label = `Chroma (${mode} - C)`;
+    c2Label = `クロマ (${mode} - C)`;
     c3 = 0;
-    c3Label = `Lightness (${mode} - L)`;
+    c3Label = `明度 (${mode} - L)`;
     yMin = 0;
     yMax = 360;
     yMax2 = .322;
@@ -535,31 +535,31 @@ function getChannelsAndFunction(mode) {
   if(mode === 'CAM02') {
     func = 'jab';
     c1 = 1;
-    c1Label = `Redness / Greenness (${mode} - A)`;
+    c1Label = `赤み / 緑み (${mode} - A)`;
     c2 = 2;
-    c2Label = `Blueness / Yellowness (${mode} - B)`;
+    c2Label = `青み / 黄み (${mode} - B)`;
     c3 = 0;
-    c3Label = `Lightness (${mode} - J)`;
+    c3Label = `明度 (${mode} - J)`;
   }
   if(mode === 'CAM02p') {
     func = 'jch';
     c1 = 2;
-    c1Label = `Hue (CAM02 (Ch) - H)`;
+    c1Label = `色相 (CAM02 (Ch) - H)`;
     c2 = 1;
-    c2Label = `Chroma (CAM02 (Ch) - C)`;
+    c2Label = `クロマ (CAM02 (Ch) - C)`;
     c3 = 0;
-    c3Label = `Lightness (${mode} - J)`;
+    c3Label = `明度 (${mode} - J)`;
     yMin = 0;
     yMax = 360;
   }
   if(mode === 'HSL') {
     func = 'hsl';
     c1 = 0;
-    c1Label = `Hue (${mode} - H)`;
+    c1Label = `色相 (${mode} - H)`;
     c2 = 1;
-    c2Label = `Saturation (${mode} - S)`;
+    c2Label = `彩度 (${mode} - S)`;
     c3 = 2;
-    c3Label = `Lightness (${mode} - L)`;
+    c3Label = `明度 (${mode} - L)`;
     yMin = 0;
     yMax = 360;
     yMin2 = 0;
@@ -568,11 +568,11 @@ function getChannelsAndFunction(mode) {
   if(mode === 'HSLuv') {
     func = 'hsluv';
     c1 = 0;
-    c1Label = `Hue (${mode} - H)`;
+    c1Label = `色相 (${mode} - H)`;
     c2 = 1;
-    c2Label = `Saturation (${mode} - S)`;
+    c2Label = `彩度 (${mode} - S)`;
     c3 = 2;
-    c3Label = `Lightness (${mode} - L)`;
+    c3Label = `明度 (${mode} - L)`;
     yMin = 0;
     yMax = 360;
     yMin2 = 0;
@@ -581,11 +581,11 @@ function getChannelsAndFunction(mode) {
   if(mode === 'HSV') {
     func = 'hsv';
     c1 = 0;
-    c1Label = `Hue (${mode} - H)`;
+    c1Label = `色相 (${mode} - H)`;
     c2 = 1;
-    c2Label = `Saturation (${mode} - S)`;
+    c2Label = `彩度 (${mode} - S)`;
     c3 = 2;
-    c3Label = `Value (${mode} - V)`;
+    c3Label = `明度 (${mode} - V)`;
     yMin = 0;
     yMax = 360;
     yMin2 = 0;
