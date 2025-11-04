@@ -62,7 +62,8 @@ import {
   openPanelTab,
   openTab,
   openAppTab,
-  openSideNavItem
+  openSideNavItem,
+  initSideNavToggle
 } from './js/tabs';
 import toggleTooltip from './js/tooltip';
 
@@ -123,3 +124,5 @@ window.onload = function() {
   // On window load, transition to remove page loader
   pageLoader();
 }
+
+initSideNavToggle();

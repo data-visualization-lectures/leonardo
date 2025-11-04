@@ -247,6 +247,100 @@ function openScaleTab(evt, tabName, scaleType) {
   evt.currentTarget.className += " is-selected";
 }
 
+const SIDE_NAV_DESKTOP_QUERY = '(min-width: 960px)';
+
+function initSideNavToggle() {
+  if (typeof window === 'undefined') {
+    return;
+  }
+
+  const desktopMq = window.matchMedia(SIDE_NAV_DESKTOP_QUERY);
+  const wrappers = document.querySelectorAll('.sideNav-Wrapper');
+  const navToggleMap = new Map();
+
+  wrappers.forEach((wrapper) => {
+    const toggle = wrapper.querySelector('.sideNav-toggle');
+    const panel = wrapper.querySelector('.sideNav-panel');
+
+    if (!panel) {
+      return;
+    }
+
+    const setExpanded = (expanded) => {
+      if (toggle) {
+        toggle.setAttribute('aria-expanded', expanded);
+      }
+      wrapper.dataset.collapsed = expanded ? 'false' : 'true';
+      if (expanded) {
+        panel.removeAttribute('hidden');
+      } else {
+        panel.setAttribute('hidden', '');
+      }
+    };
+
+    navToggleMap.set(panel.id || wrapper.id || `nav-${navToggleMap.size}`, toggle);
+
+    const syncWithViewport = () => {
+      if (desktopMq.matches) {
+        setExpanded(true);
+      } else {
+        setExpanded(false);
+      }
+    };
+
+    if (toggle) {
+      toggle.addEventListener('click', () => {
+        if (desktopMq.matches) {
+          return;
+        }
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        setExpanded(!expanded);
+      });
+    }
+
+    panel.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        if (!desktopMq.matches) {
+          setExpanded(false);
+        }
+      });
+    });
+
+    desktopMq.addEventListener('change', syncWithViewport);
+    syncWithViewport();
+  });
+  const globalToggles = document.querySelectorAll('[data-role="global-nav-toggle"]');
+  const toggleEntries = Array.from(navToggleMap.values());
+
+  globalToggles.forEach((btn) => {
+    const targetId = btn.getAttribute('data-target');
+    btn.addEventListener('click', () => {
+      if (targetId) {
+        // data-target が指定されている場合、パネルを直接開閉
+        const panel = document.getElementById(targetId);
+        if (panel) {
+          const wrapper = panel.closest('.sideNav-Wrapper');
+          const expanded = panel.getAttribute('hidden') !== null;
+          if (wrapper) {
+            wrapper.dataset.collapsed = expanded ? 'false' : 'true';
+          }
+          if (expanded) {
+            panel.removeAttribute('hidden');
+          } else {
+            panel.setAttribute('hidden', '');
+          }
+        }
+      } else {
+        // data-target がない場合、toggle エントリーの最初のものをクリック
+        const targetToggle = toggleEntries[0];
+        if (targetToggle) {
+          targetToggle.click();
+        }
+      }
+    });
+  });
+}
+
 window.openPanelTab = openPanelTab;
 window.openTab = openTab;
 window.openAccessibilityTab = openAccessibilityTab;
@@ -260,6 +354,7 @@ window.openPanelSubTab = openPanelSubTab;
 window.openCompareTab = openCompareTab;
 
 module.exports = {
+  initSideNavToggle,
   openPanelTab,
   openTab,
   openAccessibilityTab,

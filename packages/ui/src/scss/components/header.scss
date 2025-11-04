@@ -55,7 +55,22 @@
 #headerLogo ~ .spectrum-AppHeader-Title {
     margin-left: 8px;
 }
-#octo-link {
-  margin-left: 16px;
-  padding: 4px;
+.headerMenuButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spectrum-global-dimension-size-75);
+}
+
+.headerMenuLabel {
+  display: inline;
+}
+
+@media screen and (min-width: 960px) {
+  .headerMenuButton {
+    display: none;
+  }
+
+  .headerMenuLabel {
+    display: none;
+  }
 }
