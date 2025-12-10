@@ -112,6 +112,7 @@
     "posthtml-parser": "^0.10.1",
     "regenerator-runtime": "^0.13.11",
     "simple-color-converter": "^2.1.13",
-    "tinyurl": "^1.1.7"
+    "tinyurl": "^1.1.7",
+    "@supabase/supabase-js": "2.39.8"
   }
 }
