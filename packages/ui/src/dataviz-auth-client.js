@@ -1,3 +1,6 @@
+import './regenerator-runtime.js';
+import SupabaseClient from './supabase.js';
+
 // ---- 設定 ----
 const SUPABASE_URL = "https://vebhoeiltxspsurqoxvl.supabase.co";
 const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZlYmhvZWlsdHhzcHN1cnFveHZsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzAyMjI2MTIsImV4cCI6MjA0NTc5ODYxMn0.sV-Xf6wP_m46D_q-XN0oZfK9NogDqD9xV5sS-n6J8c4"; // 公開OKなAnon Key
@@ -59,7 +62,7 @@ const cookieStorage = {
 };
 
 // ---- Supabase クライアント作成 ----
-const supabase = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+const supabase = new SupabaseClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
   auth: {
     storage: cookieStorage,
     storageKey: AUTH_COOKIE_NAME,
@@ -67,7 +70,7 @@ const supabase = window.supabase ? window.supabase.createClient(SUPABASE_URL, SU
     autoRefreshToken: true,
     detectSessionInUrl: true,
   },
-}) : null;
+});
 
 
 // =========================================================================
