@@ -1,5 +1,5 @@
-import './regenerator-runtime.js';
-import SupabaseClient from './supabase.js';
+import 'regenerator-runtime/runtime';
+import { createClient } from '@supabase/supabase-js';
 
 // ---- 設定 ----
 const SUPABASE_URL = "https://vebhoeiltxspsurqoxvl.supabase.co";
@@ -62,7 +62,7 @@ const cookieStorage = {
 };
 
 // ---- Supabase クライアント作成 ----
-const supabase = new SupabaseClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
   auth: {
     storage: cookieStorage,
     storageKey: AUTH_COOKIE_NAME,
