@@ -110,9 +110,8 @@
     "node-vibrant": "^3.2.1-alpha.1",
     "plotly.js-dist-min": "^2.5.1",
     "posthtml-parser": "^0.10.1",
+    "regenerator-runtime": "^0.13.11",
     "simple-color-converter": "^2.1.13",
-    "tinyurl": "^1.1.7",
-    "@supabase/supabase-js": "^2.46.0",
-    "regenerator-runtime": "^0.13.11"
+    "tinyurl": "^1.1.7"
   }
 }
