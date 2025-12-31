@@ -1,5 +1,13 @@
+# Leonardo
 
+## 手順
 
+nvm use
+pyenv install --skip-existing 3.10.14 && pyenv local 3.10.14
+yarn install
+PYTHON="$(pyenv which python)" yarn --cwd packages/ui buildSite
+npx serve packages/ui/dist
+http://192.168.30.44:3000/?auth_debug
 
 ## ローカルでのビルド確認
  Netlify と同じ手順で動作を確認したい場合は、以下をルートディレクトリで実行してください。Parcel の依存関係（`deasync`）が利用するネイティブバイナリの都合で **Node.js 18 系（`18.20.4`）** と **Python 3.10 系** が必須です。`nvm` や `pyenv` / `mise` などのバージョンマネージャを使ってバージョンを切り替えてから実行してください。
