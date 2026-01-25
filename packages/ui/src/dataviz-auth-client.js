@@ -1,5 +1,4 @@
-// Imports
-import { createClient } from './supabase.js';
+// Imports removed for browser usage
 
 
 // ---- 設定 ----
@@ -34,36 +33,83 @@ const cookieStorage = {
       .map((c) => c.trim())
       .filter(Boolean);
 
+    // Separate cookies into a map for easier lookup
+    const cookieMap = {};
     for (const c of cookies) {
       const [k, ...rest] = c.split("=");
-      if (k === key) {
-        const rawVal = decodeURIComponent(rest.join("="));
-        try { return JSON.parse(rawVal); } catch (e) { }
-        try {
-          let toDecode = rawVal.startsWith('base64-') ? rawVal.slice(7) : rawVal;
-          const base64Standard = toDecode.replace(/-/g, '+').replace(/_/g, '/');
-          return JSON.parse(atob(base64Standard));
-        } catch (e) { return null; }
-      }
+      cookieMap[k] = rest.join("=");
     }
-    return null;
+
+    let combinedValue = null;
+
+    if (cookieMap[key]) {
+      combinedValue = decodeURIComponent(cookieMap[key]);
+    } else if (cookieMap[`${key}.0`]) {
+      let chunks = [];
+      let i = 0;
+      while (cookieMap[`${key}.${i}`]) {
+        chunks.push(decodeURIComponent(cookieMap[`${key}.${i}`]));
+        i++;
+      }
+      combinedValue = chunks.join("");
+    }
+
+    if (!combinedValue) return null;
+
+    try { return JSON.parse(combinedValue); } catch (e) { }
+    try {
+      let toDecode = combinedValue.startsWith('base64-') ? combinedValue.slice(7) : combinedValue;
+      const base64Standard = toDecode.replace(/-/g, '+').replace(/_/g, '/');
+      return JSON.parse(atob(base64Standard));
+    } catch (e) { return null; }
   },
   setItem: (key, value) => {
+    // Clear old data (both base key and potential chunks) first to avoid stale fragments
+    cookieStorage.removeItem(key);
+
     let encoded;
     try { encoded = btoa(value); } catch (e) { return; }
-    let cookieStr = `${key}=${encoded}; Max-Age=${COOKIE_MAX_AGE}; Path=/; SameSite=None; Secure`;
-    if (COOKIE_DOMAIN) cookieStr += `; Domain=${COOKIE_DOMAIN}`;
-    document.cookie = cookieStr;
+
+    // Use a safe chunk size (approx 3KB) to stay well under the 4KB limit including headers/domain
+    const CHUNK_SIZE = 3000;
+    if (encoded.length <= CHUNK_SIZE) {
+      let cookieStr = `${key}=${encoded}; Max-Age=${COOKIE_MAX_AGE}; Path=/; SameSite=None; Secure`;
+      if (COOKIE_DOMAIN) cookieStr += `; Domain=${COOKIE_DOMAIN}`;
+      document.cookie = cookieStr;
+    } else {
+      for (let i = 0; i * CHUNK_SIZE < encoded.length; i++) {
+        const chunk = encoded.slice(i * CHUNK_SIZE, (i + 1) * CHUNK_SIZE);
+        let cookieStr = `${key}.${i}=${chunk}; Max-Age=${COOKIE_MAX_AGE}; Path=/; SameSite=None; Secure`;
+        if (COOKIE_DOMAIN) cookieStr += `; Domain=${COOKIE_DOMAIN}`;
+        document.cookie = cookieStr;
+      }
+    }
   },
   removeItem: (key) => {
-    let cookieStr = `${key}=; Max-Age=0; Path=/; SameSite=None; Secure`;
-    if (COOKIE_DOMAIN) cookieStr += `; Domain=${COOKIE_DOMAIN}`;
-    document.cookie = cookieStr;
+    const removeSpecific = (k) => {
+      let cookieStr = `${k}=; Max-Age=0; Path=/; SameSite=None; Secure`;
+      if (COOKIE_DOMAIN) cookieStr += `; Domain=${COOKIE_DOMAIN}`;
+      document.cookie = cookieStr;
+    };
+
+    // Remove the base key
+    removeSpecific(key);
+
+    // Also remove any existing chunks
+    const cookies = document.cookie.split(";").map(c => c.trim().split("=")[0]);
+    for (const k of cookies) {
+      if (k.startsWith(`${key}.`)) {
+        const suffix = k.substring(key.length + 1);
+        if (/^\d+$/.test(suffix)) {
+          removeSpecific(k);
+        }
+      }
+    }
   },
 };
 
 // ---- Supabase クライアント作成 ----
-const supabase = (window.supabase ? window.supabase : { createClient }).createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+const supabase = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
   auth: {
     storage: cookieStorage,
     storageKey: AUTH_COOKIE_NAME,
@@ -71,7 +117,7 @@ const supabase = (window.supabase ? window.supabase : { createClient }).createCl
     autoRefreshToken: true,
     detectSessionInUrl: true,
   },
-});
+}) : null;
 // 外部公開（リファクタリング対応）
 if (supabase) {
   window.datavizSupabase = supabase;
