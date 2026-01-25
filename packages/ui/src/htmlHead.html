@@ -45,7 +45,16 @@
 
   <link rel="stylesheet" href="https://use.typekit.net/sik3zpp.css">
 
-  <!-- Auth & Global Header -->
-  <script src="./regenerator-runtime.js"></script>
-  <script src="./dataviz-auth-client.js"></script>
+  <!-- Auth & Global Header (Loaded dynamically to bypass Parcel bundling) -->
+  <script>
+    (function () {
+      const scripts = ['./regenerator-runtime.js', './supabase.js', './dataviz-auth-client.js'];
+      scripts.forEach(src => {
+        const s = document.createElement('script');
+        s.src = src;
+        s.async = false;
+        document.head.appendChild(s);
+      });
+    })();
+  </script>
 </head>
