@@ -11,12 +11,13 @@ governing permissions and limitations under the License.
 */
 
 :root {
+  --global-header-height: 48px;
   --gradient-height-offset: 284px;
   --chartWrapperMaxWidth: calc(1000px - 48px);
-  --gradient-height: calc(100vh - var(--gradient-height-offset));
+  --gradient-height: calc(100vh - var(--gradient-height-offset) - var(--global-header-height));
   --colors-height: var(--gradient-height);
   --color-size: 32px;
-  --colors-wrapper-height: calc(100vh - var(--gradient-height-offset) - var(--color-size));
+  --colors-wrapper-height: calc(100vh - var(--gradient-height-offset) - var(--color-size) - var(--global-header-height));
   --gradient-slider-height: var(--gradient-height);
   --slider-thumb-size: 8px; // 24px
   --header-height: 58px;
@@ -109,7 +110,8 @@ body,
 .appFrame {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  margin-top: var(--global-header-height);
+  height: calc(100vh - var(--global-header-height));
   overflow: hidden;
   display: grid;
   grid-template-columns: auto;
@@ -123,7 +125,7 @@ body,
 .appFramePanels {
   margin: 0;
   padding: 0;
-  height: calc(100vh - var(--header-height));
+  height: calc(100vh - var(--header-height) - var(--global-header-height));
   overflow: hidden;
   display: grid;
   grid-template-columns: 304px auto 388px;
@@ -137,7 +139,7 @@ body,
 .appFramePanel {
   margin: 0;
   padding: 0;
-  height: calc(100vh - var(--header-height));
+  height: calc(100vh - var(--header-height) - var(--global-header-height));
   overflow: hidden;
   display: grid;
   grid-template-columns: auto;
@@ -150,7 +152,7 @@ body,
 .appFramePanelLeft {
   margin: 0;
   padding: 0;
-  height: calc(100vh - var(--header-height));
+  height: calc(100vh - var(--header-height) - var(--global-header-height));
   overflow: hidden;
   display: grid;
   grid-template-columns: 388px auto;
@@ -168,7 +170,7 @@ body,
 .appFramePanelRight {
   margin: 0;
   padding: 0;
-  height: calc(100vh - var(--header-height));
+  height: calc(100vh - var(--header-height) - var(--global-header-height));
   overflow: hidden;
   display: grid;
   grid-template-columns: auto 388px;
@@ -182,7 +184,7 @@ body,
 .appFramePanelRight--large {
   margin: 0;
   padding: 0;
-  height: calc(100vh - var(--header-height));
+  height: calc(100vh - var(--header-height) - var(--global-header-height));
   overflow: hidden;
   display: grid;
   grid-template-columns: auto;
@@ -204,7 +206,7 @@ body,
 .appFrameSideNav {
   margin: 0;
   padding: 0;
-  height: calc(100vh - var(--header-height));
+  height: calc(100vh - var(--header-height) - var(--global-header-height));
   overflow: hidden;
   display: grid;
   grid-template-columns: 240px auto;
@@ -397,7 +399,7 @@ body,
   position: absolute; // Temporarily remove this to make sure all parts interactive
   background-color: var(--panelBackground);
   width: 100%;
-  height: calc(100vh - 58px);
+  height: calc(100vh - 58px - var(--global-header-height));
   z-index: 2;
 }
 
@@ -408,7 +410,7 @@ body,
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: calc(100vh - var(--spectrum-global-dimension-size-400));
+  height: calc(100vh - var(--spectrum-global-dimension-size-400) - var(--global-header-height));
   overflow: hidden;
 }
 #colorScale-wrapper {
@@ -686,7 +688,7 @@ main {
   grid-area: main;
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 56px);
+  height: calc(100vh - 56px - var(--global-header-height));
   overflow: hidden;
 
   &#main_diverging,
@@ -1094,7 +1096,7 @@ a:focus {
   padding: 0;
   overflow: hidden;
   grid-template-columns: auto;
-  grid-template-rows: 128px calc(100vh - var(--header-height) - 128px);
+  grid-template-rows: 128px calc(100vh - var(--header-height) - 128px - var(--global-header-height));
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   grid-template-areas:
